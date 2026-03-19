@@ -4,15 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Powder Jungle – Hakuba, Japan</title>
-  <meta name="description" content="A comfortable, modern holiday rental in Hakuba, Japan. Close to the mountains, easy to settle into." />
+  <meta name="description" content="A private holiday stay in Hakuba, Japan. Between Tsugaike and Iwatake resorts." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- NAVIGATION -->
+  <!-- ================================================
+       NAVIGATION
+  ================================================= -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
       <span class="nav__logo-en">Powder Jungle</span>
@@ -29,7 +31,7 @@
     </button>
   </nav>
 
-  <!-- Mobile nav -->
+  <!-- Mobile nav overlay -->
   <div class="nav__mobile" id="navMobile">
     <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
     <ul>
@@ -40,23 +42,30 @@
     </ul>
   </div>
 
-  <!-- HERO -->
+  <!-- ================================================
+       HERO
+  ================================================= -->
   <section class="hero" id="hero">
     <!-- REPLACE: hero-video.mp4 with your actual video file -->
     <video class="hero__video" autoplay muted loop playsinline poster="hero-poster.jpg">
-      <!-- REPLACE: Update src to your video file path -->
+      <!-- REPLACE: Update src to your video path -->
       <source src="hero-video.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay"></div>
+
     <div class="hero__content">
-      <div class="hero__eyebrow">Hakuba, Nagano &nbsp;/&nbsp; 白馬・長野</div>
+      <div class="hero__eyebrow">Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野</div>
       <h1 class="hero__title">
         <span class="hero__title-en">Powder Jungle</span>
         <span class="hero__title-jp">パウダージャングル</span>
       </h1>
+      <p class="hero__tagline">
+        Powder by winter. Jungle by summer.
+        <span class="jp">冬はパウダー、夏はジャングル。</span>
+      </p>
       <p class="hero__sub">
-        Powder by winter, Jungle by summer.
-        <span class="jp">冬はパウダー、夏はグリーン。</span>
+        A private stay in the heart of Hakuba.
+        <span class="jp">白馬の中心にあるプライベートな滞在。</span>
       </p>
       <div class="hero__actions">
         <a href="#book" class="btn btn--primary">
@@ -64,142 +73,247 @@
           <span class="btn__jp">予約する</span>
         </a>
         <a href="#gallery" class="btn btn--ghost">
-          <span class="btn__en">View Gallery</span>
-          <span class="btn__jp">ギャラリーを見る</span>
+          <span class="btn__en">Explore the space</span>
+          <span class="btn__jp">室内を見る</span>
         </a>
       </div>
       <div class="hero__specs">
-        3 bedrooms · 2 bathrooms · 2 living areas
+        3 bedrooms &nbsp;·&nbsp; 2 bathrooms &nbsp;·&nbsp; 2 living areas
         <span class="jp">3ベッドルーム・バスルーム2室・リビング2室</span>
       </div>
     </div>
+
     <div class="hero__scroll"><span></span></div>
   </section>
 
-  <!-- INTRO -->
+  <!-- ================================================
+       INTRO
+  ================================================= -->
   <section class="intro section-pad" id="intro">
     <div class="container container--narrow">
       <p class="intro__text reveal">
-        Set up for a comfortable powder stay.
+        Made for an easy, comfortable stay.
       </p>
       <p class="intro__text-jp reveal">
-        快適に過ごせるよう整えています。
+        快適に過ごせるように整えています。
       </p>
       <p class="intro__sub reveal">
-        Close to the mountains. Everything ready from the moment you arrive — so you can drop your gear and get straight to the jungle.
+        Located between Tsugaike and Iwatake, with everything ready when you arrive — so you can drop your bags and head straight to the mountain.
       </p>
       <p class="intro__sub-jp reveal">
-        山へのアクセスも良く、到着した瞬間からくつろげる環境を整えています。
+        栂池と岩岳の間にあり、到着したらすぐ使えるように整えています。
+      </p>
+      <p class="intro__sub reveal">
+        A quiet, private place to return to after a day on the slopes.
+      </p>
+      <p class="intro__sub-jp reveal">
+        一日の終わりに静かに戻れる、プライベートな空間です。
       </p>
     </div>
   </section>
 
-  <!-- AT A GLANCE -->
+  <!-- ================================================
+       AT A GLANCE
+  ================================================= -->
   <section class="glance section-pad" id="glance">
     <div class="container">
       <div class="section-label reveal">At a glance <span class="jp">概要</span></div>
       <ul class="glance__grid">
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🛏</span>
+          <span class="glance__icon">
+            <!-- Bed icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9V6a1 1 0 011-1h18a1 1 0 011 1v3"/><path d="M2 9h20v9H2z"/><path d="M6 9V7"/><path d="M18 9V7"/><path d="M2 18v2"/><path d="M22 18v2"/></svg>
+          </span>
           <span class="glance__en">3 bedrooms</span>
           <span class="glance__jp">3ベッドルーム</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🚿</span>
+          <span class="glance__icon">
+            <!-- Shower icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 12V6a4 4 0 014-4h1"/><circle cx="9" cy="2" r="1"/><path d="M9 12v6a2 2 0 002 2h2a2 2 0 002-2v-6"/></svg>
+          </span>
           <span class="glance__en">2 bathrooms</span>
           <span class="glance__jp">バスルーム2室</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🛋</span>
+          <span class="glance__icon">
+            <!-- Sofa icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10V8a2 2 0 012-2h14a2 2 0 012 2v2"/><path d="M1 12h2a2 2 0 012 2v3h14v-3a2 2 0 012-2h2"/><path d="M5 17v2"/><path d="M19 17v2"/></svg>
+          </span>
           <span class="glance__en">2 living areas</span>
           <span class="glance__jp">リビング2室</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🍳</span>
+          <span class="glance__icon">
+            <!-- Kitchen icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg>
+          </span>
           <span class="glance__en">Full kitchen & dining</span>
           <span class="glance__jp">キッチン・ダイニング完備</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🚗</span>
+          <span class="glance__icon">
+            <!-- Tatami / japanese room icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg>
+          </span>
+          <span class="glance__en">Tatami room</span>
+          <span class="glance__jp">和室</span>
+        </li>
+
+        <li class="glance__item reveal">
+          <span class="glance__icon">
+            <!-- Dining icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l1-7h16l1 7"/><rect x="2" y="11" width="20" height="3" rx="1"/><path d="M5 14v5"/><path d="M19 14v5"/><path d="M8 14v5"/><path d="M16 14v5"/></svg>
+          </span>
+          <span class="glance__en">Western dining setup</span>
+          <span class="glance__jp">ダイニングスペース</span>
+        </li>
+
+        <li class="glance__item reveal">
+          <span class="glance__icon">
+            <!-- Car / parking icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 12h14"/></svg>
+          </span>
           <span class="glance__en">On-site parking</span>
           <span class="glance__jp">駐車場あり</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">📶</span>
-          <span class="glance__en">Fast Wi-Fi</span>
+          <span class="glance__icon">
+            <!-- Wi-Fi icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a9 9 0 0114 0"/><path d="M8.5 16a5 5 0 017 0"/><circle cx="12" cy="19.5" r="1"/></svg>
+          </span>
+          <span class="glance__en">High-speed Wi-Fi</span>
           <span class="glance__jp">高速Wi-Fi</span>
         </li>
+
         <li class="glance__item reveal">
-          <span class="glance__icon">🚌</span>
-          <span class="glance__en">Bus stop 5 min walk</span>
+          <span class="glance__icon">
+            <!-- Bus stop icon -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="3" width="16" height="13" rx="2"/><path d="M4 10h16"/><path d="M8 16v3"/><path d="M16 16v3"/><path d="M4 6h16"/></svg>
+          </span>
+          <span class="glance__en">5 min walk to bus stop</span>
           <span class="glance__jp">バス停まで徒歩5分</span>
         </li>
+
       </ul>
     </div>
   </section>
 
-  <!-- THE PLACE / AMENITIES -->
+  <!-- ================================================
+       THE PLACE / AMENITIES
+  ================================================= -->
   <section class="stay section-pad" id="stay">
     <div class="container">
       <div class="stay__inner">
         <div class="stay__text">
           <div class="section-label reveal">The Place <span class="jp">滞在について</span></div>
-          <h2 class="stay__heading reveal">Everything you need for a powder trip.</h2>
-          <p class="stay__heading-jp reveal">快適に過ごすための設備を整えています。</p>
+          <h2 class="stay__heading reveal">Everything you need for a snow stay.</h2>
+          <p class="stay__heading-jp reveal">快適な滞在のための設備が整っています。</p>
           <ul class="stay__list">
-            <li class="stay__list-item reveal"><span class="en">Brand new kitchen</span><span class="jp">新しいキッチン</span></li>
-            <li class="stay__list-item reveal"><span class="en">Jura coffee machine</span><span class="jp">Juraコーヒーマシン</span></li>
-            <li class="stay__list-item reveal"><span class="en">Brand new bathroom</span><span class="jp">新しいバスルーム</span></li>
-            <li class="stay__list-item reveal"><span class="en">Two separate living areas</span><span class="jp">2つのリビングスペース</span></li>
-            <li class="stay__list-item reveal"><span class="en">TVs in every room</span><span class="jp">各部屋にテレビ完備</span></li>
-            <li class="stay__list-item reveal"><span class="en">Full heating for winter</span><span class="jp">冬でも暖かく過ごせます</span></li>
-            <li class="stay__list-item reveal"><span class="en">Washer / laundry</span><span class="jp">洗濯機・ランドリー完備</span></li>
-            <li class="stay__list-item reveal"><span class="en">On-site parking</span><span class="jp">駐車場あり</span></li>
-            <li class="stay__list-item reveal"><span class="en">Fast Wi-Fi</span><span class="jp">高速Wi-Fi</span></li>
-            <li class="stay__list-item reveal"><span class="en">4 min to Tsugaike Resort</span><span class="jp">栂池リゾートまで車で4分</span></li>
-            <li class="stay__list-item reveal"><span class="en">6 min to Iwatake Resort</span><span class="jp">岩岳リゾートまで車で6分</span></li>
+            <li class="stay__list-item reveal">
+              <span class="en">Newly renovated kitchen</span>
+              <span class="jp">新しくリノベーションされたキッチン</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Jura coffee machine</span>
+              <span class="jp">Juraコーヒーマシン</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Modern bathroom with updated fittings</span>
+              <span class="jp">設備を一新したバスルーム</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Tatami room with Western dining setup</span>
+              <span class="jp">和室（洋風ダイニング対応）</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Two separate living areas</span>
+              <span class="jp">2つのリビングスペース</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">TVs in every room</span>
+              <span class="jp">各部屋にテレビ完備</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Full heating for winter stays</span>
+              <span class="jp">冬でも暖かく快適</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">Washer & laundry facilities</span>
+              <span class="jp">洗濯機・ランドリー完備</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">On-site parking</span>
+              <span class="jp">駐車場あり</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">High-speed Wi-Fi</span>
+              <span class="jp">高速Wi-Fi</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">4 min to Tsugaike Resort</span>
+              <span class="jp">栂池リゾートまで車で4分</span>
+            </li>
+            <li class="stay__list-item reveal">
+              <span class="en">6 min to Iwatake Resort</span>
+              <span class="jp">岩岳リゾートまで車で6分</span>
+            </li>
           </ul>
         </div>
-        <!-- REPLACE: gallery-1.jpg with an interior photo -->
+        <!-- REPLACE: gallery-1.jpg with a real interior photo -->
         <div class="stay__image reveal">
-          <img src="gallery-1.jpg" alt="Inside Powder Jungle – living area" loading="lazy" />
+          <img src="gallery-1.jpg" alt="Powder Jungle interior" loading="lazy" />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
+  <!-- ================================================
+       GALLERY
+  ================================================= -->
   <section class="gallery section-pad" id="gallery">
     <div class="container">
       <div class="section-label reveal">Gallery <span class="jp">ギャラリー</span></div>
       <h2 class="gallery__heading reveal">
-        Take a look inside.
+        Step inside.
         <span class="jp">室内の様子をご覧ください。</span>
       </h2>
     </div>
     <div class="gallery__grid">
-      <!-- REPLACE: Update each src with your actual photos -->
-      <div class="gallery__item reveal"><img src="gallery-1.jpg" alt="Powder Jungle – Interior" loading="lazy" /></div>
-      <div class="gallery__item reveal"><img src="gallery-2.jpg" alt="Powder Jungle – Bedroom" loading="lazy" /></div>
+      <!-- REPLACE: all gallery images with real photos -->
+      <div class="gallery__item reveal">
+        <img src="gallery-1.jpg" alt="Powder Jungle – living area" loading="lazy" />
+      </div>
+      <div class="gallery__item reveal">
+        <img src="gallery-2.jpg" alt="Powder Jungle – bedroom" loading="lazy" />
+      </div>
       <div class="gallery__item gallery__item--wide reveal">
-        <!-- REPLACE: Add gallery-3.jpg -->
-        <img src="gallery-1.jpg" alt="Powder Jungle – Kitchen" loading="lazy" />
+        <!-- REPLACE: Add gallery-3.jpg – e.g. kitchen or dining -->
+        <img src="gallery-1.jpg" alt="Powder Jungle – kitchen" loading="lazy" />
       </div>
       <div class="gallery__item reveal">
-        <!-- REPLACE: Add gallery-4.jpg -->
-        <img src="gallery-2.jpg" alt="Powder Jungle – View" loading="lazy" />
+        <!-- REPLACE: Add gallery-4.jpg – e.g. tatami room or view -->
+        <img src="gallery-2.jpg" alt="Powder Jungle – tatami room" loading="lazy" />
       </div>
       <div class="gallery__item reveal">
-        <!-- REPLACE: Add gallery-5.jpg -->
-        <img src="gallery-1.jpg" alt="Powder Jungle – Living area" loading="lazy" />
+        <!-- REPLACE: Add gallery-5.jpg – e.g. exterior or lounge -->
+        <img src="gallery-1.jpg" alt="Powder Jungle – exterior" loading="lazy" />
       </div>
     </div>
   </section>
 
-  <!-- LOCATION / HAKUBA -->
+  <!-- ================================================
+       LOCATION / HAKUBA
+  ================================================= -->
   <section class="hakuba section-pad" id="hakuba">
     <div class="hakuba__bg">
-      <!-- REPLACE: gallery-2.jpg with a landscape / mountain shot of Hakuba -->
+      <!-- REPLACE: gallery-2.jpg with a mountain landscape photo -->
       <img src="gallery-2.jpg" alt="Hakuba mountains in winter" loading="lazy" />
       <div class="hakuba__overlay"></div>
     </div>
@@ -208,7 +322,7 @@
         <div class="section-label section-label--light">Location <span class="jp">ロケーション</span></div>
         <h2 class="hakuba__heading">A great base for the jungle.</h2>
         <p class="hakuba__heading-jp">冬の白馬を楽しむのに便利なロケーションです。</p>
-        <p class="hakuba__sub">Easy access to nearby resorts, with a quiet setting to come back to.</p>
+        <p class="hakuba__sub">Between Tsugaike and Iwatake, with a quiet setting to return to.</p>
         <p class="hakuba__sub-jp">スキー場へのアクセスも良く、落ち着いた環境でゆっくり過ごせます。</p>
         <div class="hakuba__stats">
           <div class="hakuba__stat">
@@ -228,7 +342,9 @@
     </div>
   </section>
 
-  <!-- JOURNAL -->
+  <!-- ================================================
+       JOURNAL
+  ================================================= -->
   <section class="journal section-pad" id="journal">
     <div class="container">
       <div class="journal__header">
@@ -240,7 +356,7 @@
           </h2>
         </div>
         <a href="blog.html" class="btn btn--outline reveal">
-          <span class="btn__en">All posts</span>
+          <span class="btn__en">View journal</span>
           <span class="btn__jp">すべて見る</span>
         </a>
       </div>
@@ -279,11 +395,14 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- ================================================
+       GOOD TO KNOW (FAQ)
+  ================================================= -->
   <section class="faq section-pad" id="faq">
     <div class="container container--narrow">
-      <div class="section-label reveal">FAQ <span class="jp">よくある質問</span></div>
+      <div class="section-label reveal">Good to know <span class="jp">よくある質問</span></div>
       <div class="faq__list">
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">Where is Powder Jungle located?</span>
@@ -291,10 +410,11 @@
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Hakuba, Nagano Prefecture — close to Tsugaike and Iwatake resorts.</p>
-            <p class="jp">長野県白馬村。栂池高原・岩岳リゾートに近く、山岳エリアへのアクセスが便利です。</p>
+            <p>Ochikura, Hakuba — perfectly positioned between Tsugaike and Iwatake resorts.</p>
+            <p class="jp">白馬・落倉エリア。栂池と岩岳の間に位置しています。</p>
           </div>
         </div>
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">How many guests can stay?</span>
@@ -302,10 +422,12 @@
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>3 bedrooms and 2 living areas. Check the listing for exact capacity and bed configuration.</p>
-            <p class="jp">3ベッドルーム・リビング2室を備えています。詳しい定員はリスティングをご確認ください。</p>
+            <!-- REPLACE: Update X with the actual guest count -->
+            <p>Comfortably accommodates up to X guests across multiple bedrooms.</p>
+            <p class="jp">複数のベッドルームでX名まで快適に宿泊可能です。</p>
           </div>
         </div>
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">Is parking available?</span>
@@ -313,21 +435,23 @@
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Yes — on-site parking is included.</p>
-            <p class="jp">はい、敷地内に駐車場をご用意しています。</p>
+            <p>Yes — on-site parking is available.</p>
+            <p class="jp">敷地内に駐車場があります。</p>
           </div>
         </div>
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is it suitable in winter?</span>
-            <span class="faq__q-jp">冬でも利用できますか？</span>
+            <span class="faq__q-en">Is it comfortable in winter?</span>
+            <span class="faq__q-jp">冬でも快適に過ごせますか？</span>
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>It's built for it. Full heating, easy resort access, and a warm base to return to after a day in the powder.</p>
-            <p class="jp">はい、冬の滞在に対応した設備を整えています。暖房完備で、近隣スキー場へのアクセスも良好です。</p>
+            <p>Yes — the house is fully heated and designed for winter stays.</p>
+            <p class="jp">冬でも快適に過ごせるよう、暖房設備を整えています。</p>
           </div>
         </div>
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">How do I book?</span>
@@ -335,26 +459,30 @@
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Via Airbnb or Booking.com, or contact us directly below.</p>
-            <p class="jp">AirbnbまたはBooking.comからご予約いただけます。直接のお問い合わせも歓迎です。</p>
+            <p>You can book directly through our website, or contact us for availability.</p>
+            <p class="jp">ウェブサイトから直接予約、またはお問い合わせください。</p>
           </div>
         </div>
+
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">What is nearby?</span>
+            <span class="faq__q-en">What's nearby?</span>
             <span class="faq__q-jp">周辺には何がありますか？</span>
             <span class="faq__icon">+</span>
           </button>
           <div class="faq__answer">
-            <p>Tsugaike Resort (4 min), Iwatake Resort (6 min), bus stop (5 min walk). Restaurants, convenience stores, and ski rental shops all close by.</p>
-            <p class="jp">栂池リゾートまで車で4分、岩岳リゾートまで6分。バス停は徒歩5分。飲食店やコンビニ、レンタルショップも近くにあります。</p>
+            <p>Tsugaike Resort (4 min drive), Iwatake Resort (6 min drive), and a bus stop just 5 minutes on foot. Sierra Resort onsen, restaurants, convenience stores, and rental shops are all close by.</p>
+            <p class="jp">栂池リゾート（車で4分）、岩岳リゾート（車で6分）、バス停まで徒歩5分。シエラリゾート温泉、飲食店、コンビニ、レンタルショップも近くにあります。</p>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
-  <!-- BOOKING -->
+  <!-- ================================================
+       BOOK
+  ================================================= -->
   <section class="book section-pad" id="book">
     <div class="container container--narrow">
       <div class="book__inner reveal">
@@ -362,12 +490,12 @@
         <h2 class="book__heading">Plan your stay.</h2>
         <p class="book__heading-jp">パウダージャングルでの滞在を計画してみてください。</p>
         <div class="book__actions">
-          <!-- REPLACE: Update href with your actual Airbnb listing URL -->
+          <!-- REPLACE: Update href with your Airbnb listing URL -->
           <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
             <span class="btn__en">Book on Airbnb</span>
             <span class="btn__jp">Airbnbで予約</span>
           </a>
-          <!-- REPLACE: Update href with your actual Booking.com listing URL -->
+          <!-- REPLACE: Update href with your Booking.com listing URL -->
           <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
             <span class="btn__en">Book on Booking.com</span>
             <span class="btn__jp">Booking.comで予約</span>
@@ -381,14 +509,16 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ================================================
+       FOOTER
+  ================================================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
         <div class="footer__brand">
           <p class="footer__name">Powder Jungle</p>
           <p class="footer__name-jp">パウダージャングル</p>
-          <p class="footer__loc">Hakuba, Japan &nbsp;/&nbsp; 白馬・日本</p>
+          <p class="footer__loc">Hakuba, Japan &nbsp;·&nbsp; 白馬・日本</p>
         </div>
         <nav class="footer__nav">
           <a href="#stay">The Place</a>
