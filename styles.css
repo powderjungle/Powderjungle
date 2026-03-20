@@ -462,10 +462,9 @@ a   { color: inherit; text-decoration: none; }
 
 .intro__text {
   text-align: center;
-  max-width: 560px;
+  max-width: 540px;
 }
 
-/* Large dominant heading */
 .intro__heading {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
@@ -476,7 +475,6 @@ a   { color: inherit; text-decoration: none; }
   margin-bottom: 1.25rem;
 }
 
-/* Lighter supporting line */
 .intro__sub {
   font-size: clamp(0.88rem, 1.4vw, 1rem);
   font-weight: 300;
@@ -485,24 +483,26 @@ a   { color: inherit; text-decoration: none; }
   letter-spacing: 0.02em;
 }
 
-/* Portrait video wrapper — preserves full frame */
+/* Portrait video wrapper — full portrait frame, zero cropping */
 .intro__video-wrap {
   width: 100%;
-  max-width: 420px;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  max-width: 380px;
+  border-radius: 14px;
+  /* NO overflow: hidden — that clips the frame */
+  /* Shadow clips cleanly via border-radius on the video itself */
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.1);
 }
 
 .intro__video-wrap video {
   display: block;
   width: 100%;
-  height: auto;       /* let natural portrait height show */
-  object-fit: contain; /* never crop — full frame preserved */
+  height: auto;       /* natural portrait height — never forced */
+  border-radius: 14px;
+  /* NO object-fit — browser must use natural video dimensions */
 }
 
 /* ------------------------------------------------------------
-   At a Glance — with heading, 8 items, 4 columns desktop
+   At a Glance — calm, editorial, no box UI feel
    ------------------------------------------------------------ */
 .glance { background-color: var(--color-bg); }
 
@@ -515,68 +515,77 @@ a   { color: inherit; text-decoration: none; }
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 300;
   color: var(--color-dark);
-  line-height: 1.25;
-  margin-bottom: 0.2em;
+  line-height: 1.45;
+  margin-bottom: 0.6em;
+  letter-spacing: -0.005em;
 }
 
 .glance__heading-jp {
-  font-size: 0.83rem;
+  font-size: 0.82rem;
   color: var(--color-muted);
   letter-spacing: 0.07em;
   line-height: 1.7;
+  opacity: 0.75;
 }
 
+/* No box — spacing only, hairline separators only */
 .glance__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1px;
-  background-color: rgba(0,0,0,0.04);
-  border: 1px solid rgba(0,0,0,0.04);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
+  gap: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  overflow: visible;
 }
 
 .glance__item {
-  background-color: var(--color-snow);
-  padding: 1.5rem 1.5rem;
+  background-color: transparent;
+  padding: 1.75rem 1.25rem 1.75rem 0;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
-  transition: background-color var(--transition);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: none;
 }
-.glance__item:hover { background-color: #f0ece4; }
+
+/* Last row — no bottom border */
+.glance__item:nth-last-child(-n+4) {
+  border-bottom: none;
+}
 
 .glance__icon {
-  width: 18px; height: 18px;
+  width: 15px; height: 15px;
   color: var(--color-accent);
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   flex-shrink: 0;
-  opacity: 0.8;
+  opacity: 0.65;
 }
 .glance__icon svg { width: 100%; height: 100%; }
 
 .glance__en {
-  font-size: 0.875rem; font-weight: 400;
+  font-size: 0.9rem;
+  font-weight: 400;
   color: var(--color-dark);
   line-height: 1.4;
+  margin-bottom: 0.45rem;
 }
+
 .glance__jp {
-  font-size: 0.69rem;
+  font-size: 0.67rem;
   color: var(--color-muted);
   letter-spacing: 0.07em;
-  line-height: 1.4;
-  opacity: 0.7;
-  margin-top: 0.15rem;
+  line-height: 1.5;
+  opacity: 0.65;
 }
 
 /* ------------------------------------------------------------
-   The Place / Amenities
+   The Stay / Amenities
    ------------------------------------------------------------ */
 .stay { background-color: var(--color-bg-alt); }
 
 .stay__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.1fr;  /* image column slightly wider */
   gap: var(--space-xl);
   align-items: start;
 }
@@ -585,47 +594,62 @@ a   { color: inherit; text-decoration: none; }
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.2rem);
   font-weight: 300;
-  line-height: 1.25;
+  line-height: 1.3;
   color: var(--color-dark);
   margin-bottom: 0.25em;
 }
 .stay__heading-jp {
   font-size: 0.85rem;
   color: var(--color-muted);
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
   letter-spacing: 0.06em;
   line-height: 1.7;
 }
 
-.stay__list { display: flex; flex-direction: column; }
+/* First group — no top border */
+.stay__list {
+  display: flex;
+  flex-direction: column;
+}
 
+/* Groups 2 and 3 — gap above, subtle top divider */
+.stay__list--group {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+/* Each item within a group */
 .stay__list-item {
   display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-md);
-  padding: 0.85rem 0;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
+  flex-direction: column;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 .stay__list-item:last-child { border-bottom: none; }
+
 .stay__list-item .en {
-  font-size: 0.875rem; font-weight: 300;
-  color: var(--color-mid); line-height: 1.45;
-  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-dark);
+  line-height: 1.45;
 }
 .stay__list-item .jp {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   color: var(--color-muted);
   letter-spacing: 0.07em;
-  text-align: right;
-  flex-shrink: 0;
+  margin-top: 0.35rem;
+  opacity: 0.62;
+  line-height: 1.5;
 }
 
+/* Image — more breathing room, slightly wider via grid column above */
 .stay__image {
   position: sticky;
   top: calc(var(--nav-height) + var(--space-md));
+  margin-top: var(--space-xl);  /* pushes image down — acts as visual break */
   aspect-ratio: 4/5;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius);
   overflow: hidden;
 }
 .stay__image img {
@@ -752,56 +776,58 @@ a   { color: inherit; text-decoration: none; }
 .hakuba__overlay {
   position: absolute; inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(6, 10, 6, 0.9)  0%,
-    rgba(6, 10, 6, 0.72) 45%,
-    rgba(6, 10, 6, 0.28) 100%
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.35)
   );
 }
 
-.hakuba__content { position: relative; z-index: 2; max-width: 500px; }
+.hakuba__content { position: relative; z-index: 2; max-width: 520px; }
 
 .hakuba__heading {
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.9rem, 3.8vw, 3.2rem);
   font-weight: 300;
   color: var(--color-white);
-  line-height: 1.18;
-  margin-bottom: 0.25em;
-}
-.hakuba__heading-jp {
-  font-size: 0.84rem;
-  color: rgba(255,255,255,0.42);
-  margin-bottom: 0.9rem;
-  letter-spacing: 0.08em;
+  line-height: 1.15;
+  margin-bottom: 0.85rem;
 }
 .hakuba__sub {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.78);
-  margin-bottom: 0.2em; line-height: 1.75;
-}
-.hakuba__sub-jp {
-  font-size: 0.78rem;
-  color: rgba(255,255,255,0.38);
-  margin-bottom: var(--space-lg);
-  letter-spacing: 0.07em;
+  font-size: 0.93rem;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 4rem;
+  line-height: 1.8;
+  font-weight: 300;
 }
 
-.hakuba__stats { display: flex; gap: var(--space-lg); flex-wrap: wrap; }
-.hakuba__stat { display: flex; flex-direction: column; gap: 0.2rem; }
+.hakuba__stats {
+  display: flex;
+  gap: 3.5rem;
+  flex-wrap: wrap;
+}
+.hakuba__stat { display: flex; flex-direction: column; gap: 0.5rem; }
 .hakuba__stat-num {
   font-family: var(--font-display);
-  font-size: 2.2rem; font-weight: 300;
-  color: var(--color-white); line-height: 1;
+  font-size: 3.4rem;
+  font-weight: 300;
+  color: var(--color-white);
+  line-height: 1;
+  letter-spacing: -0.02em;
 }
 .hakuba__stat-label {
-  font-size: 0.73rem;
-  color: rgba(255,255,255,0.45); line-height: 1.55;
+  font-size: 0.65rem;
+  font-weight: 400;
+  color: rgba(255,255,255,0.38);
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+  text-transform: uppercase;
 }
 .hakuba__stat-label .jp {
-  display: inline;
-  color: rgba(255,255,255,0.28);
-  font-size: 0.9em; margin-left: 0.2em;
+  display: block;
+  color: rgba(255,255,255,0.22);
+  font-size: 0.88em;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  margin-top: 0.15em;
 }
 
 /* ------------------------------------------------------------
@@ -1139,8 +1165,9 @@ a   { color: inherit; text-decoration: none; }
   .glance__grid { grid-template-columns: 1fr 1fr; }
   .glance__item { padding: 1.1rem 1rem; }
 
-  /* Intro portrait video — full width on mobile */
-  .intro__video-wrap { max-width: 100%; }
+  /* Intro portrait video — full width on mobile, no cropping */
+  .intro__video-wrap { max-width: 100%; border-radius: 10px; }
+  .intro__video-wrap video { border-radius: 10px; }
   .intro { padding: 4rem 0; }
 
   /* Gallery — near full-width slides on mobile */
