@@ -458,7 +458,7 @@ a   { color: inherit; text-decoration: none; }
 }
 
 /* ------------------------------------------------------------
-   Intro — full-bleed background image with overlay
+   Intro — cinematic full-bleed video/image section
    ------------------------------------------------------------ */
 .intro {
   position: relative;
@@ -466,7 +466,6 @@ a   { color: inherit; text-decoration: none; }
   text-align: center;
 }
 
-/* Background image layer */
 .intro__bg {
   position: absolute;
   inset: 0;
@@ -480,52 +479,43 @@ a   { color: inherit; text-decoration: none; }
   filter: saturate(0.85);
 }
 
-/* Soft dark gradient overlay — keeps text readable, stays elegant */
+/* Darker top, lighter bottom — text sits at centre/top */
 .intro__overlay {
   position: absolute;
   inset: 0;
   z-index: 1;
   background: linear-gradient(
-    to bottom,
-    rgba(10, 14, 10, 0.55) 0%,
-    rgba(10, 14, 10, 0.62) 100%
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.3)
   );
 }
 
-/* Content sits above both layers */
 .intro__content {
   position: relative;
   z-index: 2;
-  padding: var(--space-xl) 0;
+  padding: 9rem 0 8rem;
 }
 
-.intro__text {
+/* Large dominant heading */
+.intro__heading {
   font-family: var(--font-display);
-  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-size: clamp(2rem, 5vw, 3.8rem);
   font-weight: 300;
   color: var(--color-white);
-  line-height: 1.25;
-  margin-bottom: 0.15em;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
 }
-.intro__text-jp {
-  font-size: clamp(0.82rem, 1.4vw, 0.95rem);
-  color: rgba(255,255,255,0.5);
-  margin-bottom: var(--space-lg);
-  letter-spacing: 0.08em;
-}
+
+/* Lighter supporting line */
 .intro__sub {
-  font-size: 0.95rem;
-  color: rgba(255,255,255,0.8);
-  max-width: 520px;
-  margin: 0 auto 0.2em;
-  line-height: 1.9;
-}
-.intro__sub-jp {
-  font-size: 0.8rem;
-  color: rgba(255,255,255,0.42);
-  letter-spacing: 0.07em;
-  margin-bottom: var(--space-md);
-  line-height: 1.8;
+  font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.7;
+  letter-spacing: 0.02em;
+  max-width: 480px;
+  margin: 0 auto;
 }
 
 /* ------------------------------------------------------------
@@ -1073,7 +1063,7 @@ a   { color: inherit; text-decoration: none; }
   .glance__item { padding: 1rem 1rem; }
 
   /* Intro */
-  .intro__content { padding: 4rem 0; }
+  .intro__content { padding: 5rem 0 4.5rem; }
 
   /* Gallery — near full-width slides on mobile */
   .gallery__slide {
