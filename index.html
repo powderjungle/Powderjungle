@@ -89,35 +89,6 @@
   </section>
 
   <!-- ================================================
-       INTRO — full-width background video
-       ================================================
-       VIDEO: Change "intro-video.mp4" below to swap
-       the background video for this section.
-       POSTER: Change "intro-poster.jpg" to a still
-       frame from your video — shown while it loads.
-  ================================================= -->
-  <section class="intro" id="intro">
-    <div class="intro__bg">
-      <!-- REPLACE: intro-video.mp4 with your video file -->
-      <!-- REPLACE: intro-poster.jpg with a still frame from your video -->
-      <video autoplay muted loop playsinline poster="intro-poster.jpg">
-        <source src="intro-video.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="intro__overlay"></div>
-    <div class="intro__content">
-      <div class="container container--narrow">
-        <p class="intro__text reveal">Made for an easy, comfortable stay.</p>
-        <p class="intro__text-jp reveal">快適に過ごせるように整えています。</p>
-        <p class="intro__sub reveal">Located between Tsugaike and Iwatake, with everything ready when you arrive — so you can drop your bags and head straight to the mountain.</p>
-        <p class="intro__sub-jp reveal">栂池と岩岳の間にあり、到着したらすぐ使えるように整えています。</p>
-        <p class="intro__sub reveal">A quiet, private place to return to after a day on the slopes.</p>
-        <p class="intro__sub-jp reveal">一日の終わりに静かに戻れる、プライベートな空間です。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
        AT A GLANCE — bus stop removed, 8 items
   ================================================= -->
   <section class="glance section-pad" id="glance">
@@ -190,6 +161,30 @@
         </li>
 
       </ul>
+    </div>
+  </section>
+
+  <!-- ================================================
+       INTRO — cinematic background video
+       ================================================
+       VIDEO: Change "intro-video.mp4" to swap the video.
+       POSTER: Change "intro-poster.jpg" to a still frame
+       from your video — shown instantly while it loads.
+  ================================================= -->
+  <section class="intro" id="intro">
+    <div class="intro__bg">
+      <!-- REPLACE: intro-video.mp4 with your video file -->
+      <!-- REPLACE: intro-poster.jpg with a still frame from your video -->
+      <video autoplay muted loop playsinline poster="intro-poster.jpg">
+        <source src="intro-video.mp4" type="video/mp4" />
+      </video>
+    </div>
+    <div class="intro__overlay"></div>
+    <div class="intro__content">
+      <div class="container container--narrow">
+        <h2 class="intro__heading reveal">Made for an easy, comfortable stay.</h2>
+        <p class="intro__sub reveal">A quiet, cosy place to return to after a day on the slopes.</p>
+      </div>
     </div>
   </section>
 
