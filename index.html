@@ -89,16 +89,20 @@
   </section>
 
   <!-- ================================================
-       INTRO — full-width background image
+       INTRO — full-width background video
        ================================================
-       PHOTO: Change "intro-bg.jpg" below to swap
-       the background photo for this section.
-       Recommended: a warm interior or snowy outdoor
-       shot. Landscape orientation works best.
+       VIDEO: Change "intro-video.mp4" below to swap
+       the background video for this section.
+       POSTER: Change "intro-poster.jpg" to a still
+       frame from your video — shown while it loads.
   ================================================= -->
   <section class="intro" id="intro">
     <div class="intro__bg">
-      <img src="intro-bg.jpg" alt="Powder Jungle – interior" loading="lazy" />
+      <!-- REPLACE: intro-video.mp4 with your video file -->
+      <!-- REPLACE: intro-poster.jpg with a still frame from your video -->
+      <video autoplay muted loop playsinline poster="intro-poster.jpg">
+        <source src="intro-video.mp4" type="video/mp4" />
+      </video>
     </div>
     <div class="intro__overlay"></div>
     <div class="intro__content">
