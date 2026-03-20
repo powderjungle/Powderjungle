@@ -112,3 +112,89 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+
+// -----------------------------------------------
+// Gallery — horizontal scroll with drag, dots, arrows
+// -----------------------------------------------
+(function () {
+  const track = document.querySelector('.gallery__track');
+  const dotsContainer = document.getElementById('galleryDots');
+  const prevBtn = document.querySelector('.gallery__arrow--prev');
+  const nextBtn = document.querySelector('.gallery__arrow--next');
+  if (!track) return;
+
+  const slides = track.querySelectorAll('.gallery__slide');
+  let isDragging = false;
+  let startX = 0;
+  let scrollStart = 0;
+
+  // Build dots
+  slides.forEach((_, i) => {
+    const dot = document.createElement('button');
+    dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
+    dot.setAttribute('aria-label', 'Go to photo ' + (i + 1));
+    dot.addEventListener('click', () => scrollToSlide(i));
+    if (dotsContainer) dotsContainer.appendChild(dot);
+  });
+
+  function getActiveDotIndex() {
+    const trackRect = track.parentElement.getBoundingClientRect();
+    let closest = 0;
+    let closestDist = Infinity;
+    slides.forEach((slide, i) => {
+      const dist = Math.abs(slide.getBoundingClientRect().left - trackRect.left);
+      if (dist < closestDist) { closestDist = dist; closest = i; }
+    });
+    return closest;
+  }
+
+  function updateDots() {
+    const active = getActiveDotIndex();
+    if (!dotsContainer) return;
+    dotsContainer.querySelectorAll('.gallery__dot').forEach((d, i) => {
+      d.classList.toggle('active', i === active);
+    });
+    if (prevBtn) prevBtn.classList.toggle('hidden', active === 0);
+    if (nextBtn) nextBtn.classList.toggle('hidden', active === slides.length - 1);
+  }
+
+  function scrollToSlide(index) {
+    const slide = slides[index];
+    if (!slide) return;
+    const trackLeft = track.getBoundingClientRect().left;
+    const slideLeft = slide.getBoundingClientRect().left;
+    track.scrollBy({ left: slideLeft - trackLeft, behavior: 'smooth' });
+  }
+
+  track.addEventListener('scroll', updateDots, { passive: true });
+
+  // Arrow buttons
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    scrollToSlide(Math.max(0, getActiveDotIndex() - 1));
+  });
+  if (nextBtn) nextBtn.addEventListener('click', () => {
+    scrollToSlide(Math.min(slides.length - 1, getActiveDotIndex() + 1));
+  });
+
+  // Mouse drag to scroll
+  track.addEventListener('mousedown', e => {
+    isDragging = true;
+    startX = e.pageX;
+    scrollStart = track.scrollLeft;
+    track.style.cursor = 'grabbing';
+  });
+  window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    track.scrollLeft = scrollStart - (e.pageX - startX);
+  });
+  window.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    track.style.cursor = 'grab';
+  });
+
+  // Init
+  updateDots();
+  if (prevBtn) prevBtn.classList.add('hidden');
+})();
