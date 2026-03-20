@@ -31,7 +31,6 @@
     </button>
   </nav>
 
-  <!-- Mobile nav overlay -->
   <div class="nav__mobile" id="navMobile">
     <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
     <ul>
@@ -43,18 +42,16 @@
   </div>
 
   <!-- ================================================
-       HERO — no changes
+       HERO
+       ================================================
+       REPLACE: hero-video.mp4 with your video file
+       REPLACE: hero-poster.jpg with a still frame
   ================================================= -->
   <section class="hero" id="hero">
-    <!-- =============================================
-         HERO VIDEO
-         REPLACE src below with your video filename
-    ============================================== -->
     <video class="hero__video" autoplay muted loop playsinline poster="hero-poster.jpg">
       <source src="hero-video.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay"></div>
-
     <div class="hero__content">
       <div class="hero__eyebrow">Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野</div>
       <h1 class="hero__title">
@@ -79,53 +76,76 @@
           <span class="btn__jp">室内を見る</span>
         </a>
       </div>
-      <div class="hero__specs">
-        3 bedrooms &nbsp;·&nbsp; 2 bathrooms &nbsp;·&nbsp; 2 living areas
-        <span class="jp">3ベッドルーム・バスルーム2室・リビング2室</span>
-      </div>
     </div>
-
     <div class="hero__scroll"><span></span></div>
   </section>
 
   <!-- ================================================
-       AT A GLANCE — bus stop removed, 8 items
+       AT A GLANCE
   ================================================= -->
   <section class="glance section-pad" id="glance">
     <div class="container">
-      <div class="section-label reveal">At a glance <span class="jp">概要</span></div>
+      <div class="glance__header">
+        <div class="section-label reveal">At a glance <span class="jp">概要</span></div>
+        <h2 class="glance__heading reveal">Thoughtfully designed for a comfortable stay.</h2>
+        <p class="glance__heading-jp reveal">快適に過ごせるよう、細部まで整えています。</p>
+      </div>
       <ul class="glance__grid">
 
         <li class="glance__item reveal">
           <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9V6a1 1 0 011-1h18a1 1 0 011 1v3"/><path d="M2 9h20v9H2z"/><path d="M6 9V7"/><path d="M18 9V7"/><path d="M2 18v2"/><path d="M22 18v2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg>
           </span>
-          <span class="glance__en">3 bedrooms</span>
-          <span class="glance__jp">3ベッドルーム</span>
+          <span class="glance__en">Newly renovated kitchen</span>
+          <span class="glance__jp">新しくリノベーションされたキッチン</span>
         </li>
 
         <li class="glance__item reveal">
           <span class="glance__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 12V6a4 4 0 014-4h1"/><circle cx="9" cy="2" r="1"/><path d="M9 12v6a2 2 0 002 2h2a2 2 0 002-2v-6"/></svg>
           </span>
-          <span class="glance__en">2 bathrooms</span>
-          <span class="glance__jp">バスルーム2室</span>
+          <span class="glance__en">Modern bathroom with refined finishes</span>
+          <span class="glance__jp">設備を一新したバスルーム</span>
+        </li>
+
+        <li class="glance__item reveal">
+          <span class="glance__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg>
+          </span>
+          <span class="glance__en">Tatami room with Western dining space</span>
+          <span class="glance__jp">和室（洋風ダイニング対応）</span>
         </li>
 
         <li class="glance__item reveal">
           <span class="glance__icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10V8a2 2 0 012-2h14a2 2 0 012 2v2"/><path d="M1 12h2a2 2 0 012 2v3h14v-3a2 2 0 012-2h2"/><path d="M5 17v2"/><path d="M19 17v2"/></svg>
           </span>
-          <span class="glance__en">2 living areas</span>
+          <span class="glance__en">Two living areas</span>
           <span class="glance__jp">リビング2室</span>
         </li>
 
         <li class="glance__item reveal">
           <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/><path d="M19 16V8"/></svg>
           </span>
-          <span class="glance__en">Full kitchen &amp; dining</span>
-          <span class="glance__jp">キッチン・ダイニング完備</span>
+          <span class="glance__en">Full heating throughout</span>
+          <span class="glance__jp">冬でも暖かく快適</span>
+        </li>
+
+        <li class="glance__item reveal">
+          <span class="glance__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </span>
+          <span class="glance__en">TVs in every room</span>
+          <span class="glance__jp">各部屋にテレビ完備</span>
+        </li>
+
+        <li class="glance__item reveal">
+          <span class="glance__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 7V5a2 2 0 014 0v2"/><circle cx="12" cy="13" r="2"/></svg>
+          </span>
+          <span class="glance__en">In-house laundry facilities</span>
+          <span class="glance__jp">洗濯機・ランドリー完備</span>
         </li>
 
         <li class="glance__item reveal">
@@ -136,54 +156,34 @@
           <span class="glance__jp">駐車場あり</span>
         </li>
 
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5a9 9 0 0114 0"/><path d="M8.5 16a5 5 0 017 0"/><circle cx="12" cy="19.5" r="1"/></svg>
-          </span>
-          <span class="glance__en">High-speed Wi-Fi</span>
-          <span class="glance__jp">高速Wi-Fi</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg>
-          </span>
-          <span class="glance__en">Tatami room</span>
-          <span class="glance__jp">和室</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l1-7h16l1 7"/><rect x="2" y="11" width="20" height="3" rx="1"/><path d="M5 14v5"/><path d="M19 14v5"/><path d="M8 14v5"/><path d="M16 14v5"/></svg>
-          </span>
-          <span class="glance__en">Western dining setup</span>
-          <span class="glance__jp">ダイニングスペース</span>
-        </li>
-
       </ul>
     </div>
   </section>
 
   <!-- ================================================
-       INTRO — cinematic background video
+       PORTRAIT VIDEO FEATURE
        ================================================
        VIDEO: Change "intro-video.mp4" to swap the video.
        POSTER: Change "intro-poster.jpg" to a still frame
        from your video — shown instantly while it loads.
+
+       NOTE: The full portrait frame is preserved —
+       do not crop or zoom this video.
   ================================================= -->
   <section class="intro" id="intro">
-    <div class="intro__bg">
-      <!-- REPLACE: intro-video.mp4 with your video file -->
-      <!-- REPLACE: intro-poster.jpg with a still frame from your video -->
-      <video autoplay muted loop playsinline poster="intro-poster.jpg">
-        <source src="intro-video.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="intro__overlay"></div>
-    <div class="intro__content">
-      <div class="container container--narrow">
-        <h2 class="intro__heading reveal">Made for an easy, comfortable stay.</h2>
-        <p class="intro__sub reveal">A quiet, cosy place to return to after a day on the slopes.</p>
+    <div class="container">
+      <div class="intro__inner">
+        <div class="intro__text">
+          <h2 class="intro__heading reveal">Made for an easy, comfortable stay.</h2>
+          <p class="intro__sub reveal">A cosy, private retreat after a day on the slopes.</p>
+        </div>
+        <div class="intro__video-wrap reveal">
+          <!-- REPLACE: intro-video.mp4 with your portrait video -->
+          <!-- REPLACE: intro-poster.jpg with a still frame from the video -->
+          <video autoplay muted loop playsinline poster="intro-poster.jpg">
+            <source src="intro-video.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
     </div>
   </section>
@@ -191,8 +191,7 @@
   <!-- ================================================
        THE STAY
        ================================================
-       PHOTO: Change "stay-photo.jpg" below to swap
-       the interior/feature photo on the right side.
+       REPLACE: stay-photo.jpg with your interior photo
   ================================================= -->
   <section class="stay section-pad" id="stay">
     <div class="container">
@@ -237,10 +236,7 @@
           </ul>
         </div>
         <div class="stay__image reveal">
-          <!-- =============================================
-               THE STAY PHOTO
-               REPLACE "stay-photo.jpg" with your photo
-          ============================================== -->
+          <!-- REPLACE: stay-photo.jpg with your interior photo -->
           <img src="stay-photo.jpg" alt="Powder Jungle interior" loading="lazy" />
         </div>
       </div>
@@ -251,19 +247,9 @@
        GALLERY — horizontal scroll, swipeable
        ================================================
        HOW TO UPDATE PHOTOS:
-       - To ADD a photo: copy one "gallery__slide" block
-         and paste it, then change the src filename.
-       - To REMOVE a photo: delete one "gallery__slide" block.
-       - To REORDER: move the blocks up or down.
-       - Each image is clearly labelled below.
-
-       PHOTO FILENAMES:
-       gallery-1.jpg  → first photo shown
-       gallery-2.jpg  → second photo
-       gallery-3.jpg  → third photo
-       gallery-4.jpg  → fourth photo
-       gallery-5.jpg  → fifth photo
-       gallery-6.jpg  → sixth photo (optional, add more as needed)
+       - ADD: copy a "gallery__slide" block, change the src
+       - REMOVE: delete a "gallery__slide" block
+       - REORDER: move blocks up or down
   ================================================= -->
   <section class="gallery section-pad" id="gallery">
     <div class="container">
@@ -273,43 +259,21 @@
         <span class="jp">室内の様子をご覧ください。</span>
       </h2>
     </div>
-
     <div class="gallery__track-wrap">
       <div class="gallery__track">
-
         <!-- Gallery image 1 — REPLACE src with your photo -->
-        <div class="gallery__slide">
-          <img src="gallery-1.jpg" alt="Powder Jungle – living area" loading="lazy" />
-        </div>
-
+        <div class="gallery__slide"><img src="gallery-1.jpg" alt="Powder Jungle – living area" loading="lazy" /></div>
         <!-- Gallery image 2 — REPLACE src with your photo -->
-        <div class="gallery__slide">
-          <img src="gallery-2.jpg" alt="Powder Jungle – bedroom" loading="lazy" />
-        </div>
-
+        <div class="gallery__slide"><img src="gallery-2.jpg" alt="Powder Jungle – bedroom" loading="lazy" /></div>
         <!-- Gallery image 3 — REPLACE src with your photo -->
-        <div class="gallery__slide">
-          <img src="gallery-3.jpg" alt="Powder Jungle – kitchen" loading="lazy" />
-        </div>
-
+        <div class="gallery__slide"><img src="gallery-3.jpg" alt="Powder Jungle – kitchen" loading="lazy" /></div>
         <!-- Gallery image 4 — REPLACE src with your photo -->
-        <div class="gallery__slide">
-          <img src="gallery-4.jpg" alt="Powder Jungle – tatami room" loading="lazy" />
-        </div>
-
+        <div class="gallery__slide"><img src="gallery-4.jpg" alt="Powder Jungle – tatami room" loading="lazy" /></div>
         <!-- Gallery image 5 — REPLACE src with your photo -->
-        <div class="gallery__slide">
-          <img src="gallery-5.jpg" alt="Powder Jungle – exterior" loading="lazy" />
-        </div>
-
-        <!-- Gallery image 6 — optional, add more by duplicating this block -->
-        <div class="gallery__slide">
-          <img src="gallery-6.jpg" alt="Powder Jungle – view" loading="lazy" />
-        </div>
-
+        <div class="gallery__slide"><img src="gallery-5.jpg" alt="Powder Jungle – exterior" loading="lazy" /></div>
+        <!-- Gallery image 6 — add more by duplicating this block -->
+        <div class="gallery__slide"><img src="gallery-6.jpg" alt="Powder Jungle – view" loading="lazy" /></div>
       </div>
-
-      <!-- Scroll arrows — desktop only -->
       <button class="gallery__arrow gallery__arrow--prev" aria-label="Previous">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
       </button>
@@ -317,23 +281,17 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
     </div>
-
-    <!-- Dot indicators -->
     <div class="gallery__dots" id="galleryDots"></div>
   </section>
 
   <!-- ================================================
-       LOCATION / HAKUBA — unchanged
+       LOCATION / HAKUBA
        ================================================
-       PHOTO: Change "hakuba-bg.jpg" to swap the
-       mountain/landscape background photo.
+       REPLACE: hakuba-bg.jpg with your landscape photo
   ================================================= -->
   <section class="hakuba section-pad" id="hakuba">
     <div class="hakuba__bg">
-      <!-- =============================================
-           LOCATION BACKGROUND PHOTO
-           REPLACE "hakuba-bg.jpg" with your landscape photo
-      ============================================== -->
+      <!-- REPLACE: hakuba-bg.jpg with your landscape photo -->
       <img src="hakuba-bg.jpg" alt="Hakuba mountains in winter" loading="lazy" />
       <div class="hakuba__overlay"></div>
     </div>
@@ -363,7 +321,7 @@
   </section>
 
   <!-- ================================================
-       FAQ (formerly "Good to know")
+       FAQ
   ================================================= -->
   <section class="faq section-pad" id="faq">
     <div class="container container--narrow">
@@ -457,22 +415,22 @@
       <div class="book__inner reveal">
         <div class="section-label">Book <span class="jp">ご予約</span></div>
         <h2 class="book__heading">Plan your stay.</h2>
-        <p class="book__heading-jp">パウダージャングルでの滞在を計画してみてください。</p>
+        <p class="book__subheading">A quiet escape in the heart of Hakuba.</p>
         <div class="book__actions">
           <!-- REPLACE: Update href with your Airbnb listing URL -->
-          <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
-            <span class="btn__en">Book on Airbnb</span>
-            <span class="btn__jp">Airbnbで予約</span>
+          <a href="#" class="btn btn--book-primary" target="_blank" rel="noopener">
+            <span class="btn__en">Airbnb</span>
+            <span class="btn__sub">View availability</span>
           </a>
           <!-- REPLACE: Update href with your Booking.com listing URL -->
-          <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
-            <span class="btn__en">Book on Booking.com</span>
-            <span class="btn__jp">Booking.comで予約</span>
+          <a href="#" class="btn btn--book-secondary" target="_blank" rel="noopener">
+            <span class="btn__en">Booking.com</span>
+            <span class="btn__sub">Check dates</span>
           </a>
           <!-- REPLACE: Update href with your actual contact email -->
-          <a href="mailto:hello@powderjungle.com" class="btn btn--outline">
-            <span class="btn__en">Contact Us</span>
-            <span class="btn__jp">お問い合わせ</span>
+          <a href="mailto:hello@powderjungle.com" class="btn btn--book-outline">
+            <span class="btn__en">Enquire directly</span>
+            <span class="btn__sub">Private bookings &amp; questions</span>
           </a>
         </div>
       </div>
