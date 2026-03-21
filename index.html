@@ -390,6 +390,9 @@
   </footer>
 
   <script>
+    // ─── Mark JS as active (reveals stay visible if JS fails) ─
+    document.body.classList.add('js-ready');
+
     // ─── Scroll Reveal ───────────────────────────────────────
     const revealEls = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
