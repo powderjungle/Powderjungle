@@ -389,4 +389,96 @@
     </div>
   </footer>
 
-  <script dat
+  <script>
+    // ─── Scroll Reveal ───────────────────────────────────────
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ─── Nav scroll state ────────────────────────────────────
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    }, { passive: true });
+
+    // ─── Mobile menu ─────────────────────────────────────────
+    const burger   = document.getElementById('navBurger');
+    const mobileNav = document.getElementById('navMobile');
+    const closeBtn  = document.getElementById('navClose');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    burger.addEventListener('click', () => mobileNav.classList.add('open'));
+    closeBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => mobileNav.classList.remove('open'));
+    });
+
+    // ─── Gallery carousel ────────────────────────────────────
+    const track     = document.querySelector('.gallery__track');
+    const dotsWrap  = document.getElementById('galleryDots');
+    const prevBtn   = document.querySelector('.gallery__arrow--prev');
+    const nextBtn   = document.querySelector('.gallery__arrow--next');
+    const slides    = document.querySelectorAll('.gallery__slide');
+    let current = 0;
+
+    if (track && slides.length) {
+      // Build dots
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+        dot.addEventListener('click', () => goTo(i));
+        dotsWrap.appendChild(dot);
+      });
+
+      function goTo(index) {
+        current = (index + slides.length) % slides.length;
+        const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 16);
+        track.scrollTo({ left: current * slideWidth, behavior: 'smooth' });
+        document.querySelectorAll('.gallery__dot').forEach((d, i) => {
+          d.classList.toggle('active', i === current);
+        });
+      }
+
+      prevBtn && prevBtn.addEventListener('click', () => goTo(current - 1));
+      nextBtn && nextBtn.addEventListener('click', () => goTo(current + 1));
+
+      // Sync dots on manual swipe
+      track.addEventListener('scroll', () => {
+        const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 16);
+        const closest = Math.round(track.scrollLeft / slideWidth);
+        if (closest !== current) {
+          current = closest;
+          document.querySelectorAll('.gallery__dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+          });
+        }
+      }, { passive: true });
+    }
+
+    // ─── FAQ accordion ───────────────────────────────────────
+    document.querySelectorAll('.faq__question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        // Close all
+        document.querySelectorAll('.faq__question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          b.nextElementSibling.classList.remove('open');
+        });
+        // Open clicked (if it was closed)
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          btn.nextElementSibling.classList.add('open');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
