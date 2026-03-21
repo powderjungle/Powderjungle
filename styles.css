@@ -368,6 +368,10 @@ a   { color: inherit; text-decoration: none; }
   width: 100%; max-width: 1200px;
   margin: 0 auto;
   padding: 0 1.75rem 6rem;
+  /* Explicit column stack — prevents side-by-side layout on any screen */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 /* Staggered fade-in on load */
@@ -829,9 +833,9 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .hakuba__stats {
-  display: flex;
-  gap: 3.5rem;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem 3.5rem;
 }
 .hakuba__stat { display: flex; flex-direction: column; gap: 0.5rem; }
 .hakuba__stat-num {
@@ -1129,7 +1133,7 @@ a   { color: inherit; text-decoration: none; }
   .journal__grid { grid-template-columns: 1fr; }
   .journal__header { flex-direction: column; align-items: flex-start; }
 
-  .hakuba__stats { gap: var(--space-md); }
+  .hakuba__stats { gap: 2rem 2.5rem; }
 
   /* Book buttons full-width on tablet */
   .btn--book-primary,
@@ -1151,13 +1155,17 @@ a   { color: inherit; text-decoration: none; }
 
   /* Hero */
   .hero__content { padding: 0 1.25rem 4.5rem; }
-  /* Title: reduce font size so "Powder Jungle" fits on one line on mobile */
-  .hero__title-en { font-size: clamp(2rem, 11vw, 7.5rem); white-space: nowrap; }
-  /* Buttons: stack vertically, sized to their content — not stretched */
+  /* Title scales down cleanly on mobile — no wrapping, no overflow */
+  .hero__title-en {
+    font-size: clamp(1.8rem, 12vw, 7.5rem);
+    white-space: nowrap;
+  }
+  /* Buttons: stacked, sized to content */
   .hero__actions {
     flex-direction: column;
     align-items: flex-start;
     gap: 0.65rem;
+    flex-wrap: nowrap;
   }
   .hero__actions .btn { width: auto; align-self: flex-start; }
   .hero__scroll { display: none; }
@@ -1185,7 +1193,7 @@ a   { color: inherit; text-decoration: none; }
 
   /* Hakuba */
   .hakuba { min-height: 0; padding: var(--space-xl) 0; }
-  .hakuba__stats { gap: var(--space-sm); }
+  .hakuba__stats { grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; }
   .hakuba__stat-num { font-size: 1.75rem; }
 
   /* FAQ — hide jp label on mobile, only room for EN + icon */
