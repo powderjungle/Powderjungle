@@ -3,479 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Powder Jungle – Hakuba, Japan</title>
-  <meta name="description" content="A private holiday stay in Hakuba, Japan. Between Tsugaike and Iwatake resorts." />
-  <link rel="stylesheet" href="styles.css" />
+  <title>Best Time to Visit Hakuba – Powder Jungle Journal</title>
+  <meta name="description" content="Hakuba runs from November through to spring — but the sweet spot for powder is January and February. Here's what to expect season by season." />
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../blog.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
 </head>
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-  ================================================= -->
-  <nav class="nav" id="nav">
-    <a href="index.html" class="nav__logo">
+  <!-- NAVIGATION -->
+  <nav class="nav nav--light" id="nav">
+    <a href="../index.html" class="nav__logo">
       <span class="nav__logo-en">Powder Jungle</span>
       <span class="nav__logo-jp">パウダージャングル</span>
     </a>
     <ul class="nav__links">
-      <li><a href="#glance">The Stay</a></li>
-      <li><a href="#hakuba">Hakuba</a></li>
-      <li><a href="blog.html">Journal</a></li>
-      <li><a href="#book" class="nav__cta">Book Now</a></li>
+      <li><a href="../index.html#stay">The Stay</a></li>
+      <li><a href="../index.html#hakuba">Hakuba</a></li>
+      <li><a href="../blog.html" class="nav__active">Journal</a></li>
+      <li><a href="../index.html#book" class="nav__cta">Book Now</a></li>
     </ul>
     <button class="nav__burger" id="navBurger" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
+  <!-- Mobile nav -->
   <div class="nav__mobile" id="navMobile">
     <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
     <ul>
-      <li><a href="#glance" class="mobile-link">The Stay</a></li>
-      <li><a href="#hakuba" class="mobile-link">Hakuba</a></li>
-      <li><a href="blog.html" class="mobile-link">Journal</a></li>
-      <li><a href="#book" class="mobile-link">Book Now</a></li>
+      <li><a href="../index.html#stay" class="mobile-link">The Stay</a></li>
+      <li><a href="../index.html#hakuba" class="mobile-link">Hakuba</a></li>
+      <li><a href="../blog.html" class="mobile-link">Journal</a></li>
+      <li><a href="../index.html#book" class="mobile-link">Book Now</a></li>
     </ul>
   </div>
 
-  <!-- ================================================
-       HERO
-       ================================================
-       REPLACE: hero-video.mp4 with your video file
-       REPLACE: hero-poster.jpg with a still frame
-  ================================================= -->
-  <section class="hero" id="hero">
-    <video class="hero__video" autoplay muted loop playsinline poster="hero-poster.jpg">
-      <source src="hero-video.mp4" type="video/mp4" />
-    </video>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <div class="hero__eyebrow">Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野</div>
-      <h1 class="hero__title">
-        <span class="hero__title-en">Powder Jungle</span>
-        <span class="hero__title-jp">パウダージャングル</span>
-      </h1>
-      <p class="hero__tagline">
-        Powder by winter. Jungle by summer.
-        <span class="jp">冬はパウダー、夏はジャングル。</span>
-      </p>
-      <div class="hero__actions">
-        <a href="#book" class="btn btn--primary">
-          <span class="btn__en">Book Now</span>
-          <span class="btn__jp">予約する</span>
-        </a>
-        <a href="#gallery" class="btn btn--ghost">
-          <span class="btn__en">Explore the space</span>
-          <span class="btn__jp">室内を見る</span>
-        </a>
-      </div>
-
-    </div>
-    <div class="hero__scroll"><span></span></div>
-  </section>
-
-  <!-- ================================================
-       THE STAY
-  ================================================= -->
-  <section class="glance section-pad" id="glance">
+  <!-- ARTICLE HERO -->
+  <header class="blog-hero">
     <div class="container">
-      <div class="glance__header">
-        <div class="section-label reveal">The Stay <span class="jp">滞在について</span></div>
-      </div>
-      <ul class="glance__grid">
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg>
-          </span>
-          <span class="glance__en">Renovated kitchen</span>
-          <span class="glance__jp">新しくリノベーションされたキッチン</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 12V6a4 4 0 014-4h1"/><circle cx="9" cy="2" r="1"/><path d="M9 12v6a2 2 0 002 2h2a2 2 0 002-2v-6"/></svg>
-          </span>
-          <span class="glance__en">Modern bathroom</span>
-          <span class="glance__jp">設備を一新したバスルーム</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg>
-          </span>
-          <span class="glance__en">Tatami room &amp; dining space</span>
-          <span class="glance__jp">和室（洋風ダイニング対応）</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10V8a2 2 0 012-2h14a2 2 0 012 2v2"/><path d="M1 12h2a2 2 0 012 2v3h14v-3a2 2 0 012-2h2"/><path d="M5 17v2"/><path d="M19 17v2"/></svg>
-          </span>
-          <span class="glance__en">Two living areas</span>
-          <span class="glance__jp">リビング2室</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/><path d="M19 16V8"/></svg>
-          </span>
-          <span class="glance__en">Full heating</span>
-          <span class="glance__jp">冬でも暖かく快適</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </span>
-          <span class="glance__en">TVs throughout</span>
-          <span class="glance__jp">各部屋にテレビ完備</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 7V5a2 2 0 014 0v2"/><circle cx="12" cy="13" r="2"/></svg>
-          </span>
-          <span class="glance__en">Laundry</span>
-          <span class="glance__jp">洗濯機・ランドリー完備</span>
-        </li>
-
-        <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 12h14"/></svg>
-          </span>
-          <span class="glance__en">On-site parking</span>
-          <span class="glance__jp">駐車場あり</span>
-        </li>
-
-      </ul>
-    </div>
-  </section>
-
-  <!-- ================================================
-       PORTRAIT VIDEO FEATURE
-       ================================================
-       VIDEO: Change "intro-video.mp4" to swap the video.
-       POSTER: Change "intro-poster.jpg" to a still frame
-       from your video — shown instantly while it loads.
-
-       NOTE: The full portrait frame is preserved —
-       do not crop or zoom this video.
-  ================================================= -->
-  <section class="intro" id="intro">
-    <div class="container">
-      <div class="intro__inner">
-        <div class="intro__video-wrap reveal">
-          <!-- REPLACE: intro-video.mp4 with your portrait video -->
-          <!-- REPLACE: intro-poster.jpg with a still frame from the video -->
-          <video autoplay muted loop playsinline poster="intro-poster.jpg">
-            <source src="intro-video.mp4" type="video/mp4" />
-          </video>
+      <div class="blog-hero__inner">
+        <div class="section-label reveal">
+          Journal <span class="jp">ジャーナル</span>
+          &nbsp;·&nbsp; Seasonal
+        </div>
+        <h1 class="blog-hero__title reveal">Best Time to Visit Hakuba</h1>
+        <p class="blog-hero__title-jp reveal">白馬に行くベストシーズン</p>
+        <div class="blog-card__meta reveal" style="justify-content:center; margin-top: 1rem;">
+          <time>March 2026</time>
+          <span>·</span>
+          <span>5 min read</span>
         </div>
       </div>
     </div>
-  </section>
+  </header>
 
-  <!-- ================================================
-       GALLERY — horizontal scroll, swipeable
-       ================================================
-       HOW TO UPDATE PHOTOS:
-       - ADD: copy a "gallery__slide" block, change the src
-       - REMOVE: delete a "gallery__slide" block
-       - REORDER: move blocks up or down
-  ================================================= -->
-  <section class="gallery section-pad" id="gallery">
-    <div class="container">
-      <div class="section-label reveal">Gallery <span class="jp">ギャラリー</span></div>
-      <h2 class="gallery__heading reveal">
-        Step inside.
-        <span class="jp">室内の様子をご覧ください。</span>
-      </h2>
-    </div>
-    <div class="gallery__track-wrap">
-      <div class="gallery__track">
-        <!-- Gallery image 1 — REPLACE src with your photo -->
-        <div class="gallery__slide"><img src="gallery-1.jpg" alt="Powder Jungle – living area" loading="lazy" /></div>
-        <!-- Gallery image 2 — REPLACE src with your photo -->
-        <div class="gallery__slide"><img src="gallery-2.jpg" alt="Powder Jungle – bedroom" loading="lazy" /></div>
-        <!-- Gallery image 3 — REPLACE src with your photo -->
-        <div class="gallery__slide"><img src="gallery-3.jpg" alt="Powder Jungle – kitchen" loading="lazy" /></div>
-        <!-- Gallery image 4 — REPLACE src with your photo -->
-        <div class="gallery__slide"><img src="gallery-4.jpg" alt="Powder Jungle – tatami room" loading="lazy" /></div>
-        <!-- Gallery image 5 — REPLACE src with your photo -->
-        <div class="gallery__slide"><img src="gallery-5.jpg" alt="Powder Jungle – exterior" loading="lazy" /></div>
-        <!-- Gallery image 6 — add more by duplicating this block -->
-        <div class="gallery__slide"><img src="gallery-6.jpg" alt="Powder Jungle – view" loading="lazy" /></div>
-      </div>
-      <button class="gallery__arrow gallery__arrow--prev" aria-label="Previous">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
-      </button>
-      <button class="gallery__arrow gallery__arrow--next" aria-label="Next">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
-      </button>
-    </div>
-    <div class="gallery__dots" id="galleryDots"></div>
-  </section>
-
-  <!-- ================================================
-       LOCATION / HAKUBA
-       ================================================
-       REPLACE: hakuba-bg.jpg with your landscape photo
-  ================================================= -->
-  <section class="hakuba section-pad" id="hakuba">
-    <div class="hakuba__bg">
-      <!-- REPLACE: hakuba-bg.jpg with your landscape photo -->
-      <img src="hakuba-bg.jpg" alt="Hakuba mountains in winter" loading="lazy" />
-      <div class="hakuba__overlay"></div>
-    </div>
-    <div class="container">
-      <div class="hakuba__content reveal">
-        <div class="section-label section-label--light">Location <span class="jp">ロケーション</span></div>
-        <h2 class="hakuba__heading">Ochikura, Hakuba.</h2>
-        <p class="hakuba__heading-jp">落倉・白馬</p>
-        <p class="hakuba__sub">Between Tsugaike and Iwatake, in a quiet setting to return to.</p>
-        <div class="hakuba__stats">
-          <div class="hakuba__stat">
-            <span class="hakuba__stat-num">4 min</span>
-            <span class="hakuba__stat-label">Drive to Tsugaike Resort<br /><span class="jp">車で4分（栂池リゾート）</span></span>
-          </div>
-          <div class="hakuba__stat">
-            <span class="hakuba__stat-num">6 min</span>
-            <span class="hakuba__stat-label">Drive to Iwatake Resort<br /><span class="jp">車で6分（岩岳リゾート）</span></span>
-          </div>
-          <div class="hakuba__stat">
-            <span class="hakuba__stat-num">5 min</span>
-            <span class="hakuba__stat-label">Walk to bus stop<br /><span class="jp">バス停まで徒歩5分</span></span>
-          </div>
-          <div class="hakuba__stat">
-            <span class="hakuba__stat-num">5 min</span>
-            <span class="hakuba__stat-label">Walk to Sierra Onsen<br /><span class="jp">シエラ温泉まで徒歩5分</span></span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================================================
-       FAQ
-  ================================================= -->
-  <section class="faq section-pad" id="faq">
+  <!-- ARTICLE CONTENT -->
+  <main class="terms-main section-pad">
     <div class="container container--narrow">
-      <div class="section-label reveal">FAQ <span class="jp">よくある質問</span></div>
-      <div class="faq__list">
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Where is Powder Jungle located?</span>
-            <span class="faq__q-jp">所在地はどこですか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Ochikura, Hakuba — perfectly positioned between Tsugaike and Iwatake resorts.</p>
-            <p class="jp">白馬・落倉エリア。栂池と岩岳の中間に位置しています。</p>
-          </div>
+      <article class="article-body">
+
+        <div class="article-intro">
+          <p>Planning a trip to Hakuba and wondering when to go?</p>
+          <p>The truth is, Hakuba is one of those places that changes completely depending on the season.</p>
+          <p>In winter, it's all deep powder snow, snow-covered trees, and long days on the mountain. In the warmer months, it slows right down — green, quiet, and a completely different pace.</p>
+          <p>Same place. Completely different personality.</p>
+          <p>So, when is the best time to visit Hakuba?</p>
+          <p>If you're coming for what Hakuba is famous for — Japow — then winter is the one and only answer.</p>
         </div>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">How many guests can stay?</span>
-            <span class="faq__q-jp">何人まで宿泊できますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Comfortably accommodates up to 6 guests across three bedrooms.</p>
-            <p class="jp">3ベッドルームで最大6名様まで快適にご宿泊いただけます。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>❄️ Winter in Hakuba (December to February): Peak ski season</h2>
+          <p>Winter is what puts Hakuba on the map.</p>
+          <p>From December through to February, the valley transforms into one of Japan's most popular ski destinations, known for its consistent snowfall and light, dry powder.</p>
+          <p>Hakuba's snow comes from cold air systems moving down from Siberia, collecting moisture over the Sea of Japan before hitting the Japanese Alps. When these systems reach Hakuba, they deliver regular snowfall across the valley.</p>
+          <p>Which is a very simple way of saying — conditions are reliably good.</p>
+          <p>January and February are considered the best months to visit Hakuba, with consistent snow, fully open resorts, and the best overall ski and snowboard conditions.</p>
+          <p>This is the best time to visit Hakuba for:</p>
+          <ul>
+            <li>Powder snow conditions</li>
+            <li>Skiing and snowboarding</li>
+            <li>Peak ski season atmosphere</li>
+            <li>Experiencing Hakuba at its busiest and most energetic</li>
+          </ul>
+          <p>Riding through the trees after a fresh snowfall feels soft, quiet, and almost unreal.</p>
+          <p>Cold cheeks. Warm coffee. Repeat.</p>
+          <p>Yes, it is busier — but there is a reason people travel across the world for it.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">How do I book?</span>
-            <span class="faq__q-jp">予約方法を教えてください。</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>You can book directly through our website, or via Booking.com and Airbnb.</p>
-            <p class="jp">ご予約は公式ウェブサイト、またはBooking.com・Airbnbより承っております。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>🌨️ Early Winter in Hakuba (Late November to Early December)</h2>
+          <p>Early winter in Hakuba is quieter and more relaxed compared to peak season.</p>
+          <p>Snowfall can be less predictable, and not all ski resorts or lifts may be open yet. However, when conditions line up, it can be a beautiful time to visit before the main crowds arrive.</p>
+          <p>This period suits travellers looking for a slower pace and fewer people on the mountain.</p>
+          <p>It is also worth noting that some Hakuba accommodation operates primarily during peak winter, so options may be slightly more limited early in the season.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">What's nearby?</span>
-            <span class="faq__q-jp">周辺には何がありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Tsugaike Mountain Resort — 4 min drive</p>
-            <p class="jp">栂池高原スキー場：車で4分</p>
-            <p>Iwatake Mountain Resort — 6 min drive</p>
-            <p class="jp">白馬岩岳マウンテンリゾート：車で6分</p>
-            <p>Ochikura Jizo-mae Bus Stop — 5 min walk</p>
-            <p class="jp">落倉地蔵前バス停：徒歩5分</p>
-            <p>Sierra Resort Onsen — 2 min drive</p>
-            <p class="jp">シエラリゾート白馬温泉：車で2分</p>
-            <p>Ski &amp; Snowboard Rental Shop — 3 min drive</p>
-            <p class="jp">スキー・スノーボードレンタル：車で3分</p>
-            <p>7-Eleven — 7 min drive</p>
-            <p class="jp">セブンイレブン：車で7分</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>🌸 Spring in Hakuba (March to April): Fewer crowds, softer snow</h2>
+          <p>Spring brings a different energy to Hakuba.</p>
+          <p>The days are longer, the weather is milder, and the overall pace is more relaxed. Skiing and snowboarding are still possible — especially in March — but conditions shift from powder to softer snow.</p>
+          <p>Spring in Hakuba is best for:</p>
+          <ul>
+            <li>Sunny ski days</li>
+            <li>Fewer crowds</li>
+            <li>A more relaxed mountain experience</li>
+            <li>Beginner-friendly conditions</li>
+            <li>Snowmachine festival</li>
+          </ul>
+          <p>Think bluebird skies, softer snow, and long afternoons on the mountain.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is parking available?</span>
-            <span class="faq__q-jp">駐車場はありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — on-site parking is available.</p>
-            <p class="jp">はい、敷地内に駐車場をご用意しております。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>🌿 Hakuba Green Season (May to October): Quiet and scenic</h2>
+          <p>Outside of winter, Hakuba becomes calm, green, and far less crowded.</p>
+          <p>The green season is ideal for hiking, exploring nature, and experiencing a quieter side of the Japanese Alps.</p>
+          <p>Green season is best for:</p>
+          <ul>
+            <li>Nature and scenery</li>
+            <li>Hiking and outdoor activities such as mountain biking</li>
+            <li>A peaceful escape from busier destinations</li>
+          </ul>
+          <p>However, it is important to know that many chalets and Airbnbs in Hakuba are focused on the winter ski season, so accommodation availability can be more limited during this time.</p>
+          <p>While Hakuba is beautiful year-round, winter is when the destination feels most alive.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">What time is check-in and check-out?</span>
-            <span class="faq__q-jp">チェックイン・チェックアウトの時間は？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Check-in from 3:00pm</p>
-            <p class="jp">チェックイン：15:00以降</p>
-            <p>Check-out by 10:00am</p>
-            <p class="jp">チェックアウト：10:00まで</p>
-            <p>Early check-in and late check-out may be available on request.</p>
-            <p class="jp">アーリーチェックイン・レイトチェックアウトはご相談ください。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>🏔️ So, when is the best time to visit Hakuba?</h2>
+          <p>If your goal is skiing or snowboarding, January and February offer the best conditions, with reliable snowfall and fully open resorts.</p>
+          <p>March is a great alternative for those who prefer fewer crowds and sunnier weather.</p>
+          <p>For hiking and a quieter experience, the green season offers a completely different side of Hakuba.</p>
+          <p>But for most visitors, winter is what defines the Hakuba experience.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Do you offer self check-in?</span>
-            <span class="faq__q-jp">セルフチェックインは可能ですか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — detailed check-in instructions will be provided prior to arrival.</p>
-            <p class="jp">はい、ご到着前に詳細なチェックイン方法をご案内いたします。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>🌲 Where to stay in Hakuba</h2>
+          <p>Choosing where to stay in Hakuba can shape your trip just as much as when you visit.</p>
+          <p>Being located between resorts makes it easier to explore different ski areas without being locked into one.</p>
+          <p>Powder Jungle is located in Ochikura, just minutes from both Tsugaike and Iwatake — a quieter area of Hakuba surrounded by trees and slightly removed from the busier resort centres.</p>
+          <p>In summer, it leans into its name — green, calm, and tucked away in the forest.</p>
+          <p>In winter, it becomes Powder Jungle — snow-covered, still, and designed for slow mornings and warm nights after the mountain.</p>
+          <p>It is suited to travellers looking for a more private and relaxed stay in Hakuba, while still being close to multiple ski resorts.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is the house heated?</span>
-            <span class="faq__q-jp">暖房はありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — the home features split system air conditioning (heating &amp; cooling) along with kerosene heaters to ensure a warm and comfortable stay during winter.</p>
-            <p class="jp">はい、エアコン（冷暖房）に加え、灯油ヒーターもご用意しており、冬でも暖かく快適にお過ごしいただけます。</p>
-          </div>
-        </div>
+        <section class="article-section article-faq">
+          <h2>❓ FAQs about visiting Hakuba</h2>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Are linen and towels provided?</span>
-            <span class="faq__q-jp">リネンやタオルはありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — fresh linen and towels are provided for all guests.</p>
-            <p class="jp">はい、すべてのお客様に清潔なリネンとタオルをご用意しております。</p>
+          <div class="faq-item">
+            <h3>What is the best month to visit Hakuba?</h3>
+            <p>January and February are the best months to visit Hakuba for snow, offering the most consistent powder conditions and fully open ski resorts.</p>
           </div>
-        </div>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is Wi-Fi available?</span>
-            <span class="faq__q-jp">Wi-Fiは利用できますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — high-speed Wi-Fi is available throughout the property.</p>
-            <p class="jp">はい、館内で高速Wi-Fiをご利用いただけます。</p>
+          <div class="faq-item">
+            <h3>Does Hakuba have snow in December?</h3>
+            <p>Yes, Hakuba typically receives snowfall in December, although conditions can vary early in the month. Late December is more reliable.</p>
           </div>
-        </div>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is there a shuttle to the ski resorts?</span>
-            <span class="faq__q-jp">スキー場へのシャトルはありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — the Ochikura Jizo-mae bus stop is a 5 min walk from the property, with shuttle access to all major resorts.</p>
-            <p class="jp">はい、徒歩5分の「落倉地蔵前バス停」から各スキー場へのシャトルをご利用いただけます。</p>
+          <div class="faq-item">
+            <h3>Is Hakuba good in March?</h3>
+            <p>March is a great time to visit Hakuba for fewer crowds, sunny days, and softer snow conditions.</p>
           </div>
-        </div>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Do I need a car?</span>
-            <span class="faq__q-jp">車は必要ですか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>A car is highly recommended for flexibility, though nearby shuttle access is available.</p>
-            <p class="jp">車があるとより便利ですが、近くのシャトルバスもご利用いただけます。</p>
+          <div class="faq-item">
+            <h3>Where is the best area to stay in Hakuba?</h3>
+            <p>This depends on your travel style. Happo is more central and busy, while areas like Tsugaike and Ochikura offer a quieter, more relaxed experience with easy access to multiple resorts.</p>
           </div>
-        </div>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is there a kitchen?</span>
-            <span class="faq__q-jp">キッチンはありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — a newly renovated kitchen is thoughtfully equipped for cooking and dining, complete with a coffee machine, rice cooker, microwave, and blender.</p>
-            <p class="jp">はい、新しくリノベーションされたキッチンには、コーヒーマシン、炊飯器、電子レンジ、ブレンダーなどを備え、快適に調理・お食事をお楽しみいただけます。</p>
-          </div>
-        </div>
+        <section class="article-section">
+          <h2>✨ Final thoughts</h2>
+          <p>Hakuba is a year-round destination, but winter is what it is best known for.</p>
+          <p>If you are planning your first trip, visiting during the ski season will give you the experience most people travel for.</p>
+          <p>And if you return in another season, you will discover a completely different side of the valley.</p>
+        </section>
 
-        <div class="faq__item reveal">
-          <button class="faq__question" aria-expanded="false">
-            <span class="faq__q-en">Is there a washing machine?</span>
-            <span class="faq__q-jp">洗濯機はありますか？</span>
-            <span class="faq__icon">+</span>
-          </button>
-          <div class="faq__answer">
-            <p>Yes — laundry facilities and detergent are available for guest use.</p>
-            <p class="jp">はい、洗濯設備および洗剤をご用意しており、ご自由にご利用いただけます。</p>
-          </div>
-        </div>
+      </article>
 
+      <!-- Back to journal -->
+      <div class="terms-back" style="margin-top: 3rem;">
+        <a href="../blog.html" class="btn btn--outline">
+          <span class="btn__en">← Back to Journal</span>
+          <span class="btn__jp">ジャーナルに戻る</span>
+        </a>
       </div>
-    </div>
-  </section>
 
-  <!-- ================================================
-       RESERVATIONS
-  ================================================= -->
-  <section class="book section-pad" id="book">
-    <div class="container container--narrow">
-      <div class="book__inner reveal">
-        <div class="section-label">Reservations <span class="jp">ご予約</span></div>
-        <h2 class="book__heading">Book your stay.</h2>
-        <div class="book__actions">
-          <!-- REPLACE: Update href with your Airbnb listing URL -->
-          <a href="#" class="btn btn--book-primary" target="_blank" rel="noopener">Airbnb</a>
-          <!-- REPLACE: Update href with your Booking.com listing URL -->
-          <a href="#" class="btn btn--book-outline" target="_blank" rel="noopener">Booking.com</a>
-          <!-- REPLACE: Update href with your actual contact email -->
-          <a href="/cdn-cgi/l/email-protection#ee868b828281ae9e81998a8b9c849b8089828bc08d8183" class="btn btn--book-outline">Enquire</a>
-        </div>
-      </div>
     </div>
-  </section>
+  </main>
 
-  <!-- ================================================
-       FOOTER
-  ================================================= -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
@@ -485,110 +203,17 @@
           <p class="footer__loc">Hakuba, Japan &nbsp;·&nbsp; 白馬・日本</p>
         </div>
         <nav class="footer__nav">
-          <a href="#glance">The Stay</a>
-          <a href="#hakuba">Hakuba</a>
-          <a href="blog.html">Journal</a>
-          <a href="#book">Book</a>
-          <a href="terms.html">Terms</a>
+          <a href="../index.html#stay">The Stay</a>
+          <a href="../index.html#hakuba">Hakuba</a>
+          <a href="../blog.html">Journal</a>
+          <a href="../index.html#book">Book</a>
+          <a href="../terms.html">Terms</a>
         </nav>
       </div>
       <p class="footer__copy">© 2025 Powder Jungle. All rights reserved.</p>
     </div>
   </footer>
 
-  <script>
-    // ─── Mark JS as active (reveals stay visible if JS fails) ─
-    document.body.classList.add('js-ready');
-
-    // ─── Scroll Reveal ───────────────────────────────────────
-    const revealEls = document.querySelectorAll('.reveal');
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12 });
-    revealEls.forEach(el => revealObserver.observe(el));
-
-    // ─── Nav scroll state ────────────────────────────────────
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', window.scrollY > 40);
-    }, { passive: true });
-
-    // ─── Mobile menu ─────────────────────────────────────────
-    const burger   = document.getElementById('navBurger');
-    const mobileNav = document.getElementById('navMobile');
-    const closeBtn  = document.getElementById('navClose');
-    const mobileLinks = document.querySelectorAll('.mobile-link');
-
-    burger.addEventListener('click', () => mobileNav.classList.add('open'));
-    closeBtn.addEventListener('click', () => mobileNav.classList.remove('open'));
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => mobileNav.classList.remove('open'));
-    });
-
-    // ─── Gallery carousel ────────────────────────────────────
-    const track     = document.querySelector('.gallery__track');
-    const dotsWrap  = document.getElementById('galleryDots');
-    const prevBtn   = document.querySelector('.gallery__arrow--prev');
-    const nextBtn   = document.querySelector('.gallery__arrow--next');
-    const slides    = document.querySelectorAll('.gallery__slide');
-    let current = 0;
-
-    if (track && slides.length) {
-      // Build dots
-      slides.forEach((_, i) => {
-        const dot = document.createElement('button');
-        dot.className = 'gallery__dot' + (i === 0 ? ' active' : '');
-        dot.setAttribute('aria-label', 'Go to slide ' + (i + 1));
-        dot.addEventListener('click', () => goTo(i));
-        dotsWrap.appendChild(dot);
-      });
-
-      function goTo(index) {
-        current = (index + slides.length) % slides.length;
-        const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 16);
-        track.scrollTo({ left: current * slideWidth, behavior: 'smooth' });
-        document.querySelectorAll('.gallery__dot').forEach((d, i) => {
-          d.classList.toggle('active', i === current);
-        });
-      }
-
-      prevBtn && prevBtn.addEventListener('click', () => goTo(current - 1));
-      nextBtn && nextBtn.addEventListener('click', () => goTo(current + 1));
-
-      // Sync dots on manual swipe
-      track.addEventListener('scroll', () => {
-        const slideWidth = slides[0].offsetWidth + parseInt(getComputedStyle(track).gap || 16);
-        const closest = Math.round(track.scrollLeft / slideWidth);
-        if (closest !== current) {
-          current = closest;
-          document.querySelectorAll('.gallery__dot').forEach((d, i) => {
-            d.classList.toggle('active', i === current);
-          });
-        }
-      }, { passive: true });
-    }
-
-    // ─── FAQ accordion ───────────────────────────────────────
-    document.querySelectorAll('.faq__question').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const expanded = btn.getAttribute('aria-expanded') === 'true';
-        // Close all
-        document.querySelectorAll('.faq__question').forEach(b => {
-          b.setAttribute('aria-expanded', 'false');
-          b.nextElementSibling.classList.remove('open');
-        });
-        // Open clicked (if it was closed)
-        if (!expanded) {
-          btn.setAttribute('aria-expanded', 'true');
-          btn.nextElementSibling.classList.add('open');
-        }
-      });
-    });
-  </script>
+  <script src="../script.js"></script>
 </body>
 </html>
