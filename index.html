@@ -18,7 +18,7 @@
 
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
-      <img src="/Powderjungle/powder-jungle-logo-light.svg" alt="Powder Jungle" style="height:42px;width:auto;display:block;">
+      <img src="/Powderjungle/powder-jungle-logo-light.svg" alt="Powder Jungle" style="height:48px;width:auto;display:block;">
     </a>
     <ul class="nav__links">
       <li><a href="#glance">The Stay</a></li>
@@ -46,32 +46,47 @@
       <source src="hero-video.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay" style="opacity:0.45;"></div>
-    <div class="hero__content" style="gap:2rem;">
-      <div class="hero__eyebrow" style="margin-bottom:0.5rem;">
+    <div class="hero__content" style="gap:0;display:flex;flex-direction:column;align-items:flex-start;">
+
+      <!-- Location -->
+      <div class="hero__eyebrow" style="margin-bottom:2rem;letter-spacing:0.12em;">
         Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野
-        <span class="jp" style="display:block;font-size:0.75em;margin-top:0.3rem;opacity:0.7;">白馬・長野県</span>
       </div>
-      <h1 class="hero__title" style="font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:0.04em;line-height:1.15;margin-bottom:0.25rem;">
+
+      <!-- English headline -->
+      <h1 class="hero__title" style="font-size:clamp(2.8rem,7vw,4.6rem);font-weight:300;letter-spacing:0.02em;line-height:1.1;margin-bottom:0.6rem;">
         <span class="hero__title-en">A quiet alpine stay.</span>
       </h1>
-      <p class="hero__tagline" style="font-weight:300;opacity:0.85;margin-top:0;">
-        Powder by winter. Jungle by summer.
-        <span class="jp">冬はパウダー、夏はジャングル。</span>
+
+      <!-- Japanese headline -->
+      <p style="font-family:'Cormorant Garamond',Georgia,serif;font-weight:300;font-style:italic;font-size:clamp(0.95rem,2vw,1.2rem);letter-spacing:0.18em;opacity:0.65;color:#F5F2EE;margin:0 0 2.4rem 0;line-height:1.4;">
+        静かな山の滞在。
       </p>
-      <div class="hero__actions">
-        <a href="#book" class="btn btn--primary">
+
+      <!-- Tagline -->
+      <p class="hero__tagline" style="font-weight:300;opacity:0.75;margin:0 0 2.8rem 0;font-size:clamp(0.9rem,1.8vw,1.1rem);">
+        Powder by winter. Jungle by summer.
+        <span class="jp" style="display:block;margin-top:0.3rem;opacity:0.8;">冬はパウダー、夏はジャングル。</span>
+      </p>
+
+      <!-- Buttons -->
+      <div class="hero__actions" style="gap:0.75rem;">
+        <a href="#book" class="btn btn--primary" style="padding:0.7rem 1.6rem;">
           <span class="btn__en">Book Now</span>
           <span class="btn__jp">予約する</span>
         </a>
-        <a href="#gallery" class="btn btn--ghost">
+        <a href="#gallery" class="btn btn--ghost" style="padding:0.7rem 1.6rem;">
           <span class="btn__en">Explore the space</span>
           <span class="btn__jp">室内を見る</span>
         </a>
       </div>
-      <div class="hero__specs">
+
+      <!-- Specs -->
+      <div class="hero__specs" style="margin-top:2.4rem;">
         3 bedrooms &nbsp;·&nbsp; 2 bathrooms &nbsp;·&nbsp; 2 living areas
         <span class="jp">3ベッドルーム・バスルーム2室・リビング2室</span>
       </div>
+
     </div>
     <div class="hero__scroll"><span></span></div>
   </section>
