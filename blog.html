@@ -1,132 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Journal – Powder Jungle, Hakuba</title>
-  <meta name="description" content="Local tips, guides, and things to do in Hakuba, Japan." />
-  <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="blog.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Journal – Powder Jungle, Hakuba</title>
+<meta name="description" content="Local tips, guides, and things to do in Hakuba, Japan." />
+<link rel="stylesheet" href="styles.css" />
+<link rel="stylesheet" href="blog.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 </head>
 <body>
 
-  <!-- NAVIGATION -->
-  <nav class="nav nav--light" id="nav">
-    <a href="index.html" class="nav__logo">
-      <span class="nav__logo-en">Powder Jungle</span>
-      <span class="nav__logo-jp">パウダージャングル</span>
-    </a>
-    <ul class="nav__links">
-      <li><a href="index.html#stay">The Stay</a></li>
-      <li><a href="index.html#hakuba">Hakuba</a></li>
-      <li><a href="blog.html" class="nav__active">Journal</a></li>
-      <li><a href="index.html#book" class="nav__cta">Book Now</a></li>
-    </ul>
-    <button class="nav__burger" id="navBurger" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-  </nav>
+<!-- NAVIGATION -->
+<nav class="nav nav--light" id="nav">
+  <a href="index.html" class="nav__logo">
+    <img src="/powder-jungle-logo-light.svg" alt="Powder Jungle" style="height:42px;width:auto;display:block;">
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html#stay">The Stay</a></li>
+    <li><a href="index.html#hakuba">Hakuba</a></li>
+    <li><a href="blog.html" class="nav__active">Journal</a></li>
+    <li><a href="index.html#book" class="nav__cta">Book Now</a></li>
+  </ul>
+  <button class="nav__burger" id="navBurger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-  <!-- Mobile nav -->
-  <div class="nav__mobile" id="navMobile">
-    <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
-    <ul>
-      <li><a href="index.html#stay" class="mobile-link">The Stay</a></li>
-      <li><a href="index.html#hakuba" class="mobile-link">Hakuba</a></li>
-      <li><a href="blog.html" class="mobile-link">Journal</a></li>
-      <li><a href="index.html#book" class="mobile-link">Book Now</a></li>
-    </ul>
+<!-- Mobile nav -->
+<div class="nav__mobile" id="navMobile">
+  <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
+  <ul>
+    <li><a href="index.html#stay" class="mobile-link">The Stay</a></li>
+    <li><a href="index.html#hakuba" class="mobile-link">Hakuba</a></li>
+    <li><a href="blog.html" class="mobile-link">Journal</a></li>
+    <li><a href="index.html#book" class="mobile-link">Book Now</a></li>
+  </ul>
+</div>
+
+<!-- BLOG HERO -->
+<header class="blog-hero">
+  <div class="container">
+    <div class="blog-hero__inner">
+      <div class="section-label reveal">Journal <span class="jp">ジャーナル</span></div>
+      <h1 class="blog-hero__title reveal">Local tips and guides.</h1>
+      <p class="blog-hero__title-jp reveal">白馬のガイドや情報。</p>
+    </div>
   </div>
+</header>
 
-  <!-- BLOG HERO -->
-  <header class="blog-hero">
-    <div class="container">
-      <div class="blog-hero__inner">
-        <div class="section-label reveal">Journal <span class="jp">ジャーナル</span></div>
-        <h1 class="blog-hero__title reveal">Local tips and guides.</h1>
-        <p class="blog-hero__title-jp reveal">白馬のガイドや情報。</p>
-      </div>
-    </div>
-  </header>
+<!-- BLOG GRID -->
+<main class="blog-main section-pad">
+  <div class="container">
+    <div class="blog-grid">
 
-  <!-- BLOG GRID -->
-  <main class="blog-main section-pad">
-    <div class="container">
-      <div class="blog-grid">
-
-        <!-- Post 1 -->
-        <article class="blog-card reveal">
-          <!-- REPLACE: blog-1.jpg – seasonal/snow photo of Hakuba -->
-          <div class="blog-card__img">
-            <img src="gallery-1.jpg" alt="Best time to visit Hakuba" loading="lazy" />
-            <span class="blog-card__tag">Seasonal</span>
-          </div>
-          <div class="blog-card__body">
-            <div class="blog-card__meta">
-              <time>March 2026</time>
-              <span>·</span>
-              <span>5 min read</span>
-            </div>
-            <h2 class="blog-card__title">Best Time to Visit Hakuba</h2>
-            <p class="blog-card__title-jp">白馬に行くベストシーズン</p>
-            <p class="blog-card__excerpt">Hakuba runs from November through to spring — but the sweet spot for powder is January and February. Here's what to expect season by season.</p>
-            <p class="blog-card__excerpt-jp">白馬のシーズンは11月から春まで続きます。パウダースノーのベストシーズンは1月〜2月。季節ごとの特徴をご紹介します。</p>
-            <a href="/Powderjungle/blog/best-time-to-visit-hakuba.html" class="journal__link">Read more →</a>
-          </div>
-        </article>
-
-
-
-      </div>
-    </div>
-  </main>
-
-  <!-- BOOKING BANNER -->
-  <section class="blog-cta section-pad">
-    <div class="container container--narrow">
-      <div class="blog-cta__inner reveal">
-        <h2 class="blog-cta__heading">Ready to come to Hakuba?</h2>
-        <p class="blog-cta__heading-jp">白馬への旅を計画してみましょう。</p>
-        <div class="book__actions" style="justify-content: center; margin-top: 2rem;">
-          <!-- REPLACE: Update href with your Airbnb listing URL -->
-          <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
-            <span class="btn__en">Book on Airbnb</span>
-            <span class="btn__jp">Airbnbで予約</span>
-          </a>
-          <!-- REPLACE: Update href with your Booking.com listing URL -->
-          <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
-            <span class="btn__en">Book on Booking.com</span>
-            <span class="btn__jp">Booking.comで予約</span>
-          </a>
+      <!-- Post 1 -->
+      <article class="blog-card reveal">
+        <!-- REPLACE: blog-1.jpg – seasonal/snow photo of Hakuba -->
+        <div class="blog-card__img">
+          <img src="gallery-1.jpg" alt="Best time to visit Hakuba" loading="lazy" />
+          <span class="blog-card__tag">Seasonal</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="footer__brand">
-          <p class="footer__name">Powder Jungle</p>
-          <p class="footer__name-jp">パウダージャングル</p>
-          <p class="footer__loc">Hakuba, Japan &nbsp;·&nbsp; 白馬・日本</p>
+        <div class="blog-card__body">
+          <div class="blog-card__meta">
+            <time>March 2026</time>
+            <span>·</span>
+            <span>5 min read</span>
+          </div>
+          <h2 class="blog-card__title">Best Time to Visit Hakuba</h2>
+          <p class="blog-card__title-jp">白馬に行くベストシーズン</p>
+          <p class="blog-card__excerpt">Hakuba runs from November through to spring — but the sweet spot for powder is January and February. Here's what to expect season by season.</p>
+          <p class="blog-card__excerpt-jp">白馬のシーズンは11月から春まで続きます。パウダースノーのベストシーズンは1月〜2月。季節ごとの特徴をご紹介します。</p>
+          <a href="/Powderjungle/blog/best-time-to-visit-hakuba.html" class="journal__link">Read more →</a>
         </div>
-        <nav class="footer__nav">
-          <a href="index.html#stay">The Stay</a>
-          <a href="index.html#hakuba">Hakuba</a>
-          <a href="blog.html">Journal</a>
-          <a href="index.html#book">Book</a>
-          <a href="terms.html">Terms</a>
-        </nav>
-      </div>
-      <p class="footer__copy">© 2025 Powder Jungle. All rights reserved.</p>
-    </div>
-  </footer>
+      </article>
 
-  <script src="script.js"></script>
+    </div>
+  </div>
+</main>
+
+<!-- BOOKING BANNER -->
+<section class="blog-cta section-pad">
+  <div class="container container--narrow">
+    <div class="blog-cta__inner reveal">
+      <h2 class="blog-cta__heading">Ready to come to Hakuba?</h2>
+      <p class="blog-cta__heading-jp">白馬への旅を計画してみましょう。</p>
+      <div class="book__actions" style="justify-content: center; margin-top: 2rem;">
+        <!-- REPLACE: Update href with your Airbnb listing URL -->
+        <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
+          <span class="btn__en">Book on Airbnb</span>
+          <span class="btn__jp">Airbnbで予約</span>
+        </a>
+        <!-- REPLACE: Update href with your Booking.com listing URL -->
+        <a href="#" class="btn btn--primary" target="_blank" rel="noopener">
+          <span class="btn__en">Book on Booking.com</span>
+          <span class="btn__jp">Booking.comで予約</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <p class="footer__name">Powder Jungle</p>
+        <p class="footer__name-jp">パウダージャングル</p>
+        <p class="footer__loc">Hakuba, Japan &nbsp;·&nbsp; 白馬・日本</p>
+      </div>
+      <nav class="footer__nav">
+        <a href="index.html#stay">The Stay</a>
+        <a href="index.html#hakuba">Hakuba</a>
+        <a href="blog.html">Journal</a>
+        <a href="index.html#book">Book</a>
+        <a href="terms.html">Terms</a>
+      </nav>
+    </div>
+    <p class="footer__copy">© 2025 Powder Jungle. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
