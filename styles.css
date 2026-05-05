@@ -1130,3 +1130,61 @@ a   { color: inherit; text-decoration: none; }
   .footer__inner { flex-direction: column; }
   .footer__nav { gap: 1.25rem; }
 }
+
+/* ============================================================
+   MOBILE REFINEMENTS — The Stay section (≤600px)
+   Target: section label feels grounded, items tighter
+   ============================================================ */
+@media (max-width: 600px) {
+
+  /* Section anchor — larger, more presence */
+  .glance .section-label {
+    font-size: 0.82rem;          /* up from 0.68rem */
+    letter-spacing: 0.28em;      /* slightly wider — premium feel */
+    margin-bottom: 2rem;         /* clear space before grid */
+    gap: 0.6rem;
+  }
+
+  /* Japanese beside it — stay subtle, don't grow with it */
+  .glance .section-label .jp {
+    font-size: 0.78em;           /* proportionally smaller than English */
+    letter-spacing: 0.08em;
+    opacity: 0.7;
+  }
+
+  /* Tighten section top padding — remove excess air above heading */
+  .glance.section-pad {
+    padding-top: 2.75rem;
+  }
+
+  /* Header block — tighter below label before grid starts */
+  .glance__header {
+    margin-bottom: 0.25rem;
+  }
+
+  /* Items — reduce vertical padding for tighter rhythm */
+  .glance__item {
+    padding: 1.4rem 0;
+  }
+
+  /* Feature title — slightly more weight and presence */
+  .glance__en {
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  /* Japanese feature text — keep soft */
+  .glance__jp {
+    font-size: 0.64rem;
+    opacity: 0.5;
+    margin-top: 0.2rem;
+  }
+
+  /* Icon — nudge slightly larger for better proportion */
+  .glance__icon {
+    width: 12px;
+    height: 12px;
+    margin-bottom: 1.1rem;
+  }
+}
