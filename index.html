@@ -16,9 +16,6 @@
 </head>
 <body>
 
-  <!-- ================================================
-       NAVIGATION
-  ================================================= -->
   <nav class="nav" id="nav">
     <a href="index.html" class="nav__logo">
       <img src="/Powderjungle/powder-jungle-logo-light.svg" alt="Powder Jungle" style="height:42px;width:auto;display:block;">
@@ -44,24 +41,20 @@
     </ul>
   </div>
 
-  <!-- ================================================
-       HERO
-       ================================================
-       REPLACE: hero-video.mp4 with your video file
-       REPLACE: hero-poster.jpg with a still frame
-  ================================================= -->
   <section class="hero" id="hero">
     <video class="hero__video" autoplay muted loop playsinline poster="hero-poster.jpg">
       <source src="hero-video.mp4" type="video/mp4" />
     </video>
-    <div class="hero__overlay"></div>
-    <div class="hero__content">
-      <div class="hero__eyebrow">Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野</div>
-      <h1 class="hero__title">
-        <span class="hero__title-en">Powder Jungle</span>
-        <span class="hero__title-jp">パウダージャングル</span>
+    <div class="hero__overlay" style="opacity:0.45;"></div>
+    <div class="hero__content" style="gap:2rem;">
+      <div class="hero__eyebrow" style="margin-bottom:0.5rem;">
+        Hakuba, Nagano &nbsp;·&nbsp; 白馬・長野
+        <span class="jp" style="display:block;font-size:0.75em;margin-top:0.3rem;opacity:0.7;">白馬・長野県</span>
+      </div>
+      <h1 class="hero__title" style="font-size:clamp(2.4rem,6vw,4rem);font-weight:300;letter-spacing:0.04em;line-height:1.15;margin-bottom:0.25rem;">
+        <span class="hero__title-en">A quiet alpine stay.</span>
       </h1>
-      <p class="hero__tagline">
+      <p class="hero__tagline" style="font-weight:300;opacity:0.85;margin-top:0;">
         Powder by winter. Jungle by summer.
         <span class="jp">冬はパウダー、夏はジャングル。</span>
       </p>
@@ -83,87 +76,56 @@
     <div class="hero__scroll"><span></span></div>
   </section>
 
-  <!-- ================================================
-       THE STAY
-  ================================================= -->
   <section class="glance section-pad" id="glance">
     <div class="container">
       <div class="glance__header">
         <div class="section-label reveal">The Stay <span class="jp">滞在について</span></div>
       </div>
       <ul class="glance__grid">
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M2 9h20"/><path d="M8 3v6"/></svg></span>
           <span class="glance__en">Renovated kitchen</span>
           <span class="glance__jp">新しくリノベーションされたキッチン</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 12V6a4 4 0 014-4h1"/><circle cx="9" cy="2" r="1"/><path d="M9 12v6a2 2 0 002 2h2a2 2 0 002-2v-6"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"/><path d="M4 12V6a4 4 0 014-4h1"/><circle cx="9" cy="2" r="1"/><path d="M9 12v6a2 2 0 002 2h2a2 2 0 002-2v-6"/></svg></span>
           <span class="glance__en">Modern bathroom</span>
           <span class="glance__jp">設備を一新したバスルーム</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="1"/><path d="M2 12h20"/><path d="M12 5v14"/></svg></span>
           <span class="glance__en">Tatami room &amp; dining space</span>
           <span class="glance__jp">和室（洋風ダイニング対応）</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10V8a2 2 0 012-2h14a2 2 0 012 2v2"/><path d="M1 12h2a2 2 0 012 2v3h14v-3a2 2 0 012-2h2"/><path d="M5 17v2"/><path d="M19 17v2"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10V8a2 2 0 012-2h14a2 2 0 012 2v2"/><path d="M1 12h2a2 2 0 012 2v3h14v-3a2 2 0 012-2h2"/><path d="M5 17v2"/><path d="M19 17v2"/></svg></span>
           <span class="glance__en">Two living areas</span>
           <span class="glance__jp">リビング2室</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/><path d="M19 16V8"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h12"/><circle cx="19" cy="18" r="2"/><path d="M19 16V8"/></svg></span>
           <span class="glance__en">Full heating</span>
           <span class="glance__jp">冬でも暖かく快適</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>
           <span class="glance__en">TVs throughout</span>
           <span class="glance__jp">各部屋にテレビ完備</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 7V5a2 2 0 014 0v2"/><circle cx="12" cy="13" r="2"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7z"/><path d="M8 7V5a2 2 0 014 0v2"/><circle cx="12" cy="13" r="2"/></svg></span>
           <span class="glance__en">Laundry</span>
           <span class="glance__jp">洗濯機・ランドリー完備</span>
         </li>
-
         <li class="glance__item reveal">
-          <span class="glance__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 12h14"/></svg>
-          </span>
+          <span class="glance__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3v-5l2-5h14l2 5v5h-2"/><circle cx="7.5" cy="17.5" r="1.5"/><circle cx="16.5" cy="17.5" r="1.5"/><path d="M5 12h14"/></svg></span>
           <span class="glance__en">On-site parking</span>
           <span class="glance__jp">駐車場あり</span>
         </li>
-
       </ul>
     </div>
   </section>
 
-  <!-- ================================================
-       PORTRAIT VIDEO FEATURE
-  ================================================= -->
   <section class="intro" id="intro">
     <div class="container">
       <div class="intro__inner">
@@ -176,9 +138,6 @@
     </div>
   </section>
 
-  <!-- ================================================
-       GALLERY
-  ================================================= -->
   <section class="gallery section-pad" id="gallery">
     <div class="container">
       <div class="section-label reveal">Gallery <span class="jp">ギャラリー</span></div>
@@ -206,9 +165,6 @@
     <div class="gallery__dots" id="galleryDots"></div>
   </section>
 
-  <!-- ================================================
-       LOCATION / HAKUBA
-  ================================================= -->
   <section class="hakuba section-pad" id="hakuba">
     <div class="hakuba__bg">
       <img src="hakuba-bg.jpg" alt="Hakuba mountains in winter" loading="lazy" />
@@ -242,14 +198,10 @@
     </div>
   </section>
 
-  <!-- ================================================
-       FAQ
-  ================================================= -->
   <section class="faq section-pad" id="faq">
     <div class="container container--narrow">
       <div class="section-label reveal">FAQ <span class="jp">よくある質問</span></div>
       <div class="faq__list">
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">Where is Powder Jungle located?</span>
@@ -261,7 +213,6 @@
             <p class="jp">白馬・落倉エリア。栂池と岩岳の間に位置しています。</p>
           </div>
         </div>
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">How many guests can stay?</span>
@@ -273,7 +224,6 @@
             <p class="jp">複数のベッドルームでX名まで快適に宿泊可能です。</p>
           </div>
         </div>
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">Is parking available?</span>
@@ -285,7 +235,6 @@
             <p class="jp">敷地内に駐車場があります。</p>
           </div>
         </div>
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">Is it comfortable in winter?</span>
@@ -297,7 +246,6 @@
             <p class="jp">冬でも快適に過ごせるよう、暖房設備を整えています。</p>
           </div>
         </div>
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">How do I book?</span>
@@ -309,7 +257,6 @@
             <p class="jp">ウェブサイトから直接予約、またはお問い合わせください。</p>
           </div>
         </div>
-
         <div class="faq__item reveal">
           <button class="faq__question" aria-expanded="false">
             <span class="faq__q-en">What's nearby?</span>
@@ -323,14 +270,10 @@
             <p class="jp">シエラリゾート温泉、飲食店、コンビニ、レンタルショップも近くにあります。</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ================================================
-       RESERVATIONS
-  ================================================= -->
   <section class="book section-pad" id="book">
     <div class="container container--narrow">
       <div class="book__inner reveal">
@@ -345,9 +288,6 @@
     </div>
   </section>
 
-  <!-- ================================================
-       FOOTER
-  ================================================= -->
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
