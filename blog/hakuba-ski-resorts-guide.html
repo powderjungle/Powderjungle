@@ -33,7 +33,6 @@
     </button>
   </nav>
 
-  <!-- Mobile nav -->
   <div class="nav__mobile" id="navMobile">
     <button class="nav__mobile-close" id="navClose" aria-label="Close menu">✕</button>
     <ul>
@@ -44,40 +43,44 @@
     </ul>
   </div>
 
-  <!-- ARTICLE HERO -->
-  <header class="blog-hero">
+  <!-- POST HERO -->
+  <header class="post-hero">
     <div class="container">
-      <div class="blog-hero__inner">
-        <div class="section-label reveal">
-          Journal <span class="jp">ジャーナル</span>
-          &nbsp;·&nbsp; Ski Guide
-        </div>
-        <h1 class="blog-hero__title reveal">Hakuba Ski Resorts Guide (Which One is Best?)</h1>
-        <p class="blog-hero__title-jp reveal">白馬スキー場ガイド</p>
-        <div class="blog-card__meta reveal" style="justify-content:center;margin-top:1rem;">
+      <div class="post-hero__inner">
+        <a href="../blog.html" class="post-back">← Journal</a>
+        <div class="section-label">Ski Guide <span class="jp">スキー場ガイド</span></div>
+        <h1 class="post-hero__title">Hakuba Ski Resorts Guide (Which One is Best?)</h1>
+        <span class="post-hero__title-jp">白馬スキー場ガイド</span>
+        <div class="post-hero__meta">
           <time>March 2026</time>
           <span>·</span>
           <span>7 min read</span>
         </div>
       </div>
     </div>
+    <!-- Hero image — replace src with your own photo -->
+    <div class="post-hero__image">
+      <div class="post-hero__image-placeholder">
+        <span>Add hero image here</span>
+      </div>
+    </div>
   </header>
 
-  <!-- ARTICLE CONTENT -->
-  <main class="terms-main section-pad">
+  <!-- POST BODY -->
+  <main class="post-body section-pad">
     <div class="container container--narrow">
       <article class="article-body">
 
+        <!-- Lead / intro -->
         <div class="article-intro">
           <p>Trying to choose a ski resort in Hakuba is a bit like looking at a dessert menu when you're already full. Everything looks good, and you're slightly overwhelmed.</p>
           <p>Because here's the thing. Hakuba isn't one resort.</p>
           <p>It's ten.</p>
           <p>All sitting in the same valley, each one a little different. Some feel big and dramatic, others are cruisy and tree lined, like you've wandered into a snow globe.</p>
-          <p>So which one is actually the best?</p>
-          <p>Short answer. It depends on you.</p>
-          <p>Long answer. Here's how it really breaks down.</p>
+          <p>So which one is actually the best? Short answer. It depends on you. Long answer. Here's how it really breaks down.</p>
         </div>
 
+        <!-- Section: What is Hakuba -->
         <section class="article-section">
           <h2>First, what is Hakuba?</h2>
           <p>Hakuba is a collection of ski resorts in Nagano, set in the Japanese Alps.</p>
@@ -85,6 +88,7 @@
           <p>Which is why where you ski, and where you stay, matters more than people think.</p>
         </section>
 
+        <!-- Section: The resorts -->
         <section class="article-section">
           <h2>The main Hakuba ski resorts</h2>
 
@@ -175,9 +179,9 @@
 
         </section>
 
-        <section class="article-section">
-          <h2>So which one is actually the best?</h2>
-          <p>Honestly.</p>
+        <!-- Callout: quick reference -->
+        <div class="post-callout">
+          <h3>Quick reference</h3>
           <ul>
             <li>Want big terrain — Happo One</li>
             <li>Want easy and reliable — Tsugaike</li>
@@ -188,8 +192,11 @@
             <li>Want something different — Sanosaka</li>
           </ul>
           <p>The best part about Hakuba is you do not have to commit. You just pick based on the day. Weather, snow, how your legs are feeling. It changes everything.</p>
-        </section>
+        </div>
 
+        <div class="post-divider"><span>Hakuba · 白馬</span></div>
+
+        <!-- Section: Where to stay -->
         <section class="article-section">
           <h2>Where you stay matters more than you think</h2>
           <p>Because everything is spread out, your base can shape your whole trip.</p>
@@ -199,6 +206,7 @@
           <p>Follow along on <a href="https://www.instagram.com/powderjunglehakuba" target="_blank" rel="noopener">Instagram</a>.</p>
         </section>
 
+        <!-- Section: Final thoughts -->
         <section class="article-section">
           <h2>Final thoughts</h2>
           <p>Hakuba does not really work like picking one resort and sticking to it. It is more fluid than that.</p>
@@ -214,12 +222,18 @@
 
       </article>
 
-      <!-- Back to journal -->
-      <div class="terms-back" style="margin-top:3rem;">
-        <a href="../blog.html" class="btn btn--outline">
-          <span class="btn__en">← Back to Journal</span>
-          <span class="btn__jp">ジャーナルに戻る</span>
+      <!-- CTA -->
+      <div class="post-cta">
+        <p class="post-cta__text">Looking for somewhere to stay between Tsugaike and Iwatake?</p>
+        <a href="../index.html#book" class="btn btn--primary">
+          <span class="btn__en">Book Powder Jungle</span>
+          <span class="btn__jp">予約する</span>
         </a>
+      </div>
+
+      <!-- Back -->
+      <div class="post-nav">
+        <a href="../blog.html" class="post-back">← Back to Journal</a>
       </div>
 
     </div>
