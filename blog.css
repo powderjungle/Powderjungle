@@ -1,15 +1,20 @@
 /* ============================================================
-   POWDER JUNGLE — blog.css  v3
+   POWDER JUNGLE — blog.css  v4
+   Editorial post styling added
    ============================================================ */
 
-/* Light nav override (for pages with white/cream header) */
+/* ------------------------------------------------------------
+   Light nav override
+   ------------------------------------------------------------ */
 .nav--light .nav__logo-en,
 .nav--light .nav__links a  { color: var(--color-dark); }
 .nav--light .nav__logo-jp  { color: var(--color-muted); }
 .nav--light .nav__burger span { background-color: var(--color-dark); }
 .nav--light .nav__links a.nav__active { color: var(--color-accent); }
 
-/* Blog hero */
+/* ------------------------------------------------------------
+   Blog index — hero
+   ------------------------------------------------------------ */
 .blog-hero {
   padding-top: calc(var(--nav-height) + var(--space-xl));
   padding-bottom: var(--space-lg);
@@ -17,7 +22,6 @@
   border-bottom: 1px solid rgba(0,0,0,0.05);
 }
 .blog-hero__inner { max-width: 640px; }
-
 .blog-hero__title {
   font-family: var(--font-display);
   font-size: clamp(2.2rem, 5vw, 4rem);
@@ -32,16 +36,15 @@
   letter-spacing: 0.08em;
 }
 
-/* Blog main */
+/* ------------------------------------------------------------
+   Blog index — grid & cards
+   ------------------------------------------------------------ */
 .blog-main { background-color: var(--color-bg); }
-
 .blog-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: var(--space-md);
 }
-
-/* Blog card */
 .blog-card {
   background-color: var(--color-snow);
   border-radius: var(--radius-lg);
@@ -53,11 +56,11 @@
   transform: translateY(-5px);
   box-shadow: 0 16px 40px rgba(0,0,0,0.07);
 }
-
 .blog-card__img {
   position: relative;
   aspect-ratio: 16/10;
-  overflow: hidden; background-color: var(--color-bg-alt);
+  overflow: hidden;
+  background-color: var(--color-bg-alt);
 }
 .blog-card__img img {
   width: 100%; height: 100%;
@@ -68,7 +71,6 @@
   transform: scale(1.05);
   filter: saturate(1);
 }
-
 .blog-card__tag {
   position: absolute; top: 1rem; left: 1rem;
   font-size: 0.62rem; font-weight: 500;
@@ -78,7 +80,6 @@
   padding: 0.3em 0.75em;
   border-radius: 3px;
 }
-
 .blog-card__body {
   padding: 1.5rem;
   flex: 1; display: flex; flex-direction: column; gap: 0.4rem;
@@ -107,7 +108,9 @@
   margin-bottom: 0.6rem;
 }
 
-/* Blog CTA */
+/* ------------------------------------------------------------
+   Blog index — CTA
+   ------------------------------------------------------------ */
 .blog-cta { background-color: var(--color-dark); text-align: center; }
 .blog-cta__inner { max-width: 540px; margin: 0 auto; }
 .blog-cta__heading {
@@ -122,11 +125,455 @@
   letter-spacing: 0.08em;
 }
 
-/* Responsive */
+/* ============================================================
+   ARTICLE / POST PAGE — editorial layout
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   Post hero — large image space + title area
+   ------------------------------------------------------------ */
+.post-hero {
+  padding-top: calc(var(--nav-height) + var(--space-xl));
+  padding-bottom: 0;
+  background-color: var(--color-dark);
+  position: relative;
+  overflow: hidden;
+}
+
+.post-hero__inner {
+  position: relative;
+  z-index: 2;
+  padding-bottom: var(--space-lg);
+  max-width: 760px;
+}
+
+.post-back {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.38);
+  transition: color 0.3s ease;
+  margin-bottom: 2rem;
+}
+.post-back:hover { color: rgba(255,255,255,0.75); }
+
+.post-hero .section-label {
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 1.75rem;
+}
+.post-hero .section-label .jp {
+  color: rgba(255,255,255,0.2);
+}
+
+.post-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  font-weight: 300;
+  color: var(--color-white);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.post-hero__title-jp {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.3);
+  letter-spacing: 0.1em;
+  font-weight: 300;
+  margin-bottom: 1.75rem;
+  display: block;
+}
+
+.post-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.72rem;
+  color: rgba(255,255,255,0.35);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Hero image strip — sits between header and body */
+.post-hero__image {
+  width: 100%;
+  height: 52vh;
+  min-height: 320px;
+  max-height: 560px;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-bg-alt);
+}
+
+.post-hero__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: saturate(0.88);
+  display: block;
+}
+
+.post-hero__image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    #1c1b18 0%,
+    #2a2d25 40%,
+    #1f2a1e 70%,
+    #161a14 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.post-hero__image-placeholder span {
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.15);
+}
+
+/* ------------------------------------------------------------
+   Post body
+   ------------------------------------------------------------ */
+.post-body {
+  background-color: var(--color-bg);
+}
+
+/* ------------------------------------------------------------
+   Article intro — larger lead text
+   ------------------------------------------------------------ */
+.article-intro {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+}
+
+.article-intro p {
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.2vw, 1.55rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-dark);
+  line-height: 1.65;
+  margin-bottom: 1em;
+  letter-spacing: 0.005em;
+}
+
+.article-intro p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------
+   Article sections
+   ------------------------------------------------------------ */
+.article-section {
+  margin-bottom: 3.5rem;
+  padding-bottom: 3.5rem;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.article-section:last-of-type {
+  border-bottom: none;
+}
+
+/* ------------------------------------------------------------
+   Post content — base typography
+   ------------------------------------------------------------ */
+.post-content p,
+.article-section p,
+.article-intro p {
+  margin-bottom: 1.4em;
+}
+
+.post-content p:last-child,
+.article-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* ------------------------------------------------------------
+   Headings
+   ------------------------------------------------------------ */
+.article-body h2,
+.post-content h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+  font-weight: 300;
+  color: var(--color-dark);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  margin-top: 3rem;
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.article-body h2::after,
+.post-content h2::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 1px;
+  background-color: var(--color-accent);
+  opacity: 0.6;
+}
+
+.article-body h3,
+.post-content h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-mid);
+  line-height: 1.3;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* ------------------------------------------------------------
+   Paragraphs
+   ------------------------------------------------------------ */
+.article-body p,
+.post-content p {
+  font-size: 1rem;
+  color: var(--color-mid);
+  line-height: 1.9;
+  margin-bottom: 1.4em;
+  font-weight: 300;
+  max-width: 65ch;
+}
+
+/* ------------------------------------------------------------
+   Resort / feature blocks (faq-item repurposed)
+   ------------------------------------------------------------ */
+.faq-item {
+  background-color: var(--color-snow);
+  border-radius: var(--radius-lg);
+  padding: 2rem 2.25rem;
+  margin-bottom: 1.25rem;
+  border-left: 2px solid var(--color-accent);
+  transition: box-shadow 0.3s ease;
+}
+
+.faq-item:hover {
+  box-shadow: 0 8px 32px rgba(0,0,0,0.05);
+}
+
+.faq-item h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: normal;
+  color: var(--color-dark);
+  margin-top: 0;
+  margin-bottom: 0.85rem;
+  letter-spacing: 0.01em;
+}
+
+.faq-item p {
+  font-size: 0.92rem;
+  color: var(--color-mid);
+  line-height: 1.85;
+  margin-bottom: 0.9em;
+  max-width: none;
+}
+
+.faq-item p:last-child { margin-bottom: 0; }
+
+/* ------------------------------------------------------------
+   Bullet lists
+   ------------------------------------------------------------ */
+.article-body ul,
+.post-content ul {
+  list-style: none;
+  margin: 1.25rem 0 1.75rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.article-body ul li,
+.post-content ul li {
+  font-size: 0.92rem;
+  color: var(--color-mid);
+  line-height: 1.7;
+  padding-left: 1.4rem;
+  position: relative;
+  font-weight: 300;
+}
+
+.article-body ul li::before,
+.post-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--color-accent);
+  opacity: 0.55;
+}
+
+.faq-item ul {
+  margin: 0.75rem 0 1rem;
+  gap: 0.35rem;
+}
+
+/* ------------------------------------------------------------
+   Callout box — for key takeaways / season summaries
+   ------------------------------------------------------------ */
+.post-callout {
+  background-color: var(--color-dark);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  margin: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.post-callout::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 2px;
+  background: linear-gradient(to right, var(--color-accent), transparent);
+}
+
+.post-callout p,
+.post-callout li {
+  color: rgba(255,255,255,0.75) !important;
+  font-size: 0.92rem !important;
+  max-width: none !important;
+}
+
+.post-callout h3 {
+  color: var(--color-white) !important;
+  font-family: var(--font-display);
+  font-size: 1.1rem !important;
+  font-style: normal !important;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 400 !important;
+  margin-top: 0 !important;
+  margin-bottom: 1.25rem !important;
+  opacity: 0.55;
+}
+
+.post-callout ul li::before {
+  background-color: rgba(255,255,255,0.4) !important;
+}
+
+/* ------------------------------------------------------------
+   Section divider — decorative
+   ------------------------------------------------------------ */
+.post-divider {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin: 3.5rem 0;
+  opacity: 0.3;
+}
+
+.post-divider::before,
+.post-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--color-dark);
+}
+
+.post-divider span {
+  font-size: 0.55rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-dark);
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------
+   Post CTA block
+   ------------------------------------------------------------ */
+.post-cta {
+  background-color: var(--color-snow);
+  border-radius: var(--radius-lg);
+  padding: 3rem;
+  text-align: center;
+  margin-top: 4rem;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.post-cta__text {
+  font-family: var(--font-display);
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-dark);
+  margin-bottom: 1.5rem !important;
+  max-width: none !important;
+}
+
+/* ------------------------------------------------------------
+   Post nav — back link
+   ------------------------------------------------------------ */
+.post-nav {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+/* ------------------------------------------------------------
+   terms-main reused for article pages
+   ------------------------------------------------------------ */
+.terms-main {
+  background-color: var(--color-bg);
+}
+
+.terms-back {
+  margin-top: 3rem;
+}
+
+/* ------------------------------------------------------------
+   Links inside articles
+   ------------------------------------------------------------ */
+.article-body a,
+.post-content a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(53, 94, 70, 0.3);
+  text-underline-offset: 3px;
+  transition: text-decoration-color 0.2s ease;
+}
+
+.article-body a:hover,
+.post-content a:hover {
+  text-decoration-color: var(--color-accent);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 @media (max-width: 900px) {
   .blog-grid { grid-template-columns: 1fr 1fr; }
+  .faq-item { padding: 1.5rem 1.75rem; }
+  .post-callout { padding: 1.75rem 2rem; }
+  .post-cta { padding: 2.25rem; }
 }
+
 @media (max-width: 600px) {
   .blog-grid { grid-template-columns: 1fr; }
   .blog-hero { padding-top: calc(var(--nav-height) + 2rem); }
+  .post-hero__image { height: 38vh; min-height: 220px; }
+  .article-intro p { font-size: 1.1rem; }
+  .article-body h2, .post-content h2 { font-size: 1.6rem; }
+  .faq-item { padding: 1.25rem 1.5rem; border-left-width: 2px; }
+  .post-callout { padding: 1.5rem; }
+  .post-cta { padding: 1.75rem 1.5rem; }
 }
